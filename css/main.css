@@ -1,0 +1,84 @@
+body{
+ font-family: 'Poppins', sans-serif !important;
+ font-size: 14px !important;
+}
+
+.onboard-bg{
+ background-image: url(../img/onboarding.png);
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position: center;
+ min-height: 125vh;
+}
+
+.signup-bg{
+ background-image: url(../img/onboarding.png);
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position: center;
+ min-height: 125vh;
+}
+
+.btn-outline-white {
+ color: #ffffff !important;
+ border-color: #ffffff !important;
+}
+
+.log-box{
+ background: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 25.97%, #F9F2F2 58.56%, #F6DDDD 100%);
+ border-radius: 10px;
+ /* height: 519px;*/
+ min-width: 345px;
+}
+.img-right{
+ position: absolute;
+ right: 0;
+ top: 40px;
+}
+.img-left{
+ position: absolute;
+ left: 0;
+ top: 120px;
+}
+.form-control {
+ display: block;
+ width: 100%;
+ height: calc(2.25rem + 2px);
+ padding: .375rem .75rem;
+ font-size: 1rem;
+ font-weight: 400;
+ line-height: 1.5;
+ color: #495057;
+ background-color: transparent !important;
+ background-clip: padding-box;
+ border: 1px solid #ced4da;
+ border-radius: .25rem;
+ transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.form-group{
+ padding:10px;
+ border:1px solid;
+ border-radius: 5px;
+ margin:10px;
+ position: relative;
+}
+.form-group>label{
+ position:absolute;
+ bottom: 40px;
+ left:30px;
+ background-color:white;
+}
+
+.form-group>input{
+ border:none;
+}
+
+.btn-signup{
+ background: #6F99C2;
+ box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.1);
+ color: #fff;
+}
+
+#diary-color{
+ color: #EB62A3 !important;
+}
