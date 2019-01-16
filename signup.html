@@ -10,7 +10,7 @@
 
  </head>
 
- <body class="onboard-bg">
+ <body class="signup-bg">
   <div class="container" >
    <nav class="navbar navbar-expand-lg navbar-light">
     <a class="navbar-brand" href="#"><img src="img/logo-white.png" alt="Bbaydiary logo" /></a>
@@ -38,46 +38,68 @@
      </ul>
     </div>
    </nav>
-
-
-
   </div>
 
   <!--   navigation ends-->
 
-<div class="container mt-5">
- <div class="row justify-content-center">
-  <div class="col-md-3 border border-light log-box">
-   <span class="img-right"><img src="img/image-right.png" /></span>
-   <span class="img-left"><img src="img/image-left.png" /></span>
-   <p class="text-center my-5" style="margin-top: 100px !important;">Sign in to your account <img src="img/happy.png" alt="happy smiley" /></p>
+  <div class="container mt-5">
+   <div class="row justify-content-center">
+    <div class="col-md-3 border border-light log-box">
+     <span class="img-right"><img src="img/image-right.png" /></span>
+     <span class="img-left"><img src="img/image-left.png" /></span>
+     <p class="text-center my-5" style="margin-top: 50px !important;">Register to create account <img src="img/happy.png" alt="happy smiley" /></p>
 
-   <form >
-    <div class="form-group my-3">
-         <label>Email</label>
-         <input type="text" class="form-control input-lg" />
+     <form>
+      <div class="form-group my-5">
+       <label>First Name</label>
+       <input type="text" class="form-control input-lg" />
+      </div>
+
+      <div class="form-group my-5">
+       <label>Last Name</label>
+       <input type="text" class="form-control input-lg" />
+      </div>
+
+      <div class="form-group my-3">
+       <label>Gender</label>
+       <select class="form-control">
+        <option>Male</option>
+        <option>Female</option>
+       </select>
+      </div>
+
+      <div class="form-group my-5">
+       <label>Create Four Digit PIN</label>
+       <input type="password" class="form-control input-lg" />
+      </div>
+
+      <div class="form-group mt-5">
+       <label>Comfirm PIN</label>
+       <input type="password" class="form-control input-lg" />
+      </div>
+
+
+      <div class="col my-3">
+       <small class="text-center">By creating your Nurturey account you confirm that you
+        agree with Baby Diary’s Terms of Service.
+       </small>
+      </div>
+
+      <div class="col">
+       <button class="btn btn-signup btn-block rounded-0">SIGN UP</button>
+      </div>
+
+      <div class="col my-3">
+       <p class="text-center">Already have an account?</p>
+      </div>
+
+      <div class="col mb-4">
+       <button class="btn btn-signup btn-block rounded-0">SIGN IN</button>
+      </div>
+     </form>
     </div>
-
-    <div class="form-group my-5">
-         <label>Password</label>
-         <input type="text" class="form-control input-lg" />
-    </div>
-
-    <div class="col">
-     <button class="btn btn-signup btn-block rounded-0">SIGN IN</button>
-    </div>
-
-    <div class="col my-3">
-     <p class="text-center">New to Baby Diary?</p>
-     <p class="text-center"><span id="diary-color">Register</span> to create account</p>
-     <p class="text-center"><a id="diary-color" href="#">Forgot password?</a></p>
-
-    </div>
-
-    </form>
+   </div>
   </div>
- </div>
-</div>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>

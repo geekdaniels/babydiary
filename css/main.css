@@ -12,11 +12,11 @@ body{
 }
 
 .signup-bg{
- background-image: url(../img/onboarding.png);
+ background-image: url(../img/signup-bg.png);
  background-repeat: no-repeat;
  background-size: cover;
  background-position: center;
- min-height: 125vh;
+ min-height: 180vh;
 }
 
 .btn-outline-white {
