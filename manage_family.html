@@ -7,6 +7,8 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/datepicker.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
  </head>
 
@@ -35,7 +37,7 @@
        </li>
        <li class="nav-item dropdown px-md-4">
         <a class="nav-link text-white dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-         <img src="img/user.png" alt="user profile" width="25" />
+         Adeleke &nbsp<img src="img/user.png" alt="user profile" width="25" />
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
          <a class="dropdown-item" href="#">Settings</a>
@@ -180,10 +182,10 @@
     </div>
    </div>
   </div>
-  
-  
+
+
   <!--Add pregnancy Modal -->
-  <div class="modal fade" id="addFamily" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal fade" id="addPregnancy" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
    <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
      <div class="modal-header">
@@ -194,41 +196,48 @@
      </div>
      <div class="modal-body">
       <form>
-       <div class="form-row">
-        <div class="col">
-         <input type="text" class="form-control" placeholder="First name">
-        </div>
-        <div class="col">
-         <input type="text" class="form-control" placeholder="Last name">
-        </div>
-       </div>
 
        <div class="form-row mt-3">
 
         <div class="col">
-         <label>Gender</label>
+
          <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-6">
            <div class="custom-control custom-radio">
-            <input type="radio" id="male" name="gender" class="custom-control-input">
-            <label class="custom-control-label" for="male">Male</label>
+            <input type="radio" id="Last_cycle" name="delivery" class="custom-control-input">
+            <label class="custom-control-label" for="Last_cycle">Last cycle period</label>
+           </div>
+
+           <div class="input-group my-4">
+            <input data-toggle="datepicker" type="text" class="form-control docs-date" name="date" placeholder="Pick a date" style="height: 3rem">
+            <div class="input-group-append">
+             <button type="button" class="btn btn-outline-secondary docs-datepicker-trigger" disabled>
+              <i class="far fa-calendar-alt" aria-hidden="true"></i>
+             </button>
+            </div>
            </div>
           </div>
 
           <div class="col-md-6">
            <div class="custom-control custom-radio">
-            <input type="radio" id="female" name="gender" class="custom-control-input">
-            <label class="custom-control-label" for="female">Female</label>
+            <input type="radio" id="Expected_date" name="delivery" class="custom-control-input">
+            <label class="custom-control-label" for="Expected_date">Expected date of delivery</label>
            </div>
+
+           <div class="input-group my-4">
+            <input data-toggle="datepicker" type="text" class="form-control docs-date" name="date" placeholder="Pick a date" style="height: 3rem">
+            <div class="input-group-append">
+             <button type="button" class="btn btn-outline-secondary docs-datepicker-trigger" disabled>
+              <i class="far fa-calendar-alt" aria-hidden="true"></i>
+             </button>
+            </div>
+           </div>
+
           </div>
 
          </div>
         </div>
 
-        <div class="col">
-         <label>Birthday</label>
-         <input type="date" class="form-control" placeholder="Last name">
-        </div>
        </div>
       </form>
      </div>
@@ -241,7 +250,18 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
-  <script src=""></script>
+  <script src="js/datepicker.js"></script>
+  <script>
+
+   //   $('[data-toggle="datepicker"]').datepicker();
+
+   $(function() {
+    $('[data-toggle="datepicker"]').datepicker({
+     autoHide: true,
+     zIndex: 2048,
+    });
+   });
+  </script>
 
  </body>
 </html>
