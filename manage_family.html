@@ -61,40 +61,183 @@
   <div class="container section">
    <div class="row">
     <div class="col-md-12 diary-card">
-     <p class="text-default font-weight-bold py-3"><img src="img/Family.png" alt="family" /> MY FAMILY</p>
+     <div class="row">
+      <div class="col-md-3">
+       <p class="text-default py-3"><img src="img/manage-family.png" alt="family" /> Manage Family</p>
+      </div>
+
+      <div class="offset-md-3 col-md-3">
+       <button type="button" class="btn btn-large btn-default my-2" ><img src="img/create-family.png" alt="add family" /> Create a new family</button>
+      </div>
+
+      <div class="col-md-3">
+       <button class="btn btn-large btn-default my-2"><img src="img/family%20icon.png" /> Join an existing family</button>
+      </div>
+     </div>
     </div>
    </div>
-   
-   
+
+
    <div class="row">
-    <div class="col-md-3 diary-card">
-     <p class="text-default font-weight-bold py-3"><img src="img/Family.png" alt="family" /> MY FAMILY</p>
-    </div>
 
-    <div class="col-md-5 px-0 diary-card">
+
+    <div class="col-md-12 px-0 diary-card">
      <div class="card-head">
-      <p class="text-center p-3">Follow steps below for a quick start</p>
-     </div>
-     <div class="p-2 m-3 diary-center-border">
-      <p class="mb-1 font-weight-bold">Update profile to access our features</p>
-      <p class="small">Filling the required information enables you to enjoy our services.</p>
-      <img src="img/status.png" alt="status" class="img-fluid" />
-      <p class="small">20% completed.</p>
+      <div class="row">
+       <div class="col-md-3">
+        <p class="text-default p-3 mb-0"> My Family<br>
+         <span class="small">Family ID : 7552288</span>
+        </p>
 
+       </div>
+
+       <div class="offset-md-3 col-md-3">
+        <button type="button" class="btn btn-large btn-default my-2" data-toggle="modal" data-target="#addFamily"><img src="img/add-member.png" /> Add member</button>
+       </div>
+
+       <div class="col-md-3">
+        <button class="btn btn-large btn-default my-2" data-toggle="modal" data-target="#addPregnancy"><img src="img/add-pregnanvy.png" /> Add pregnancy</button>
+       </div>
+      </div>
+     </div>
+     <div class="row">
+      <div class="col-md-3">      
+       <div class="m-3 diary-center-border-2">
+        <div class="text-center mb-5">
+         <div class="p-2">
+          <img src="img/add.png" alt="add-member" />
+         </div>
+         <p class="mb-1 font-weight-bold text-center">Jon Bellion</p>
+         <p class="small text-center">bellion@exolve.com</p>
+        </div>
+
+        <div class="card-bg-footer p-2">
+         <p class="text-white mb-0">Creator</p>
+        </div>
+
+       </div>
+      </div>
      </div>
     </div>
 
-    <div class="col-md-3 diary-card">
-     <p class=" text-center p-3">Share the joy</p>
-     <div class="border-3 p-2">
-      <p class="text-default mb-0"><img src="img/Shape-invite.png" class="mb-0 mr-2" />Invite friend to baby diary</p>
-     </div>
-     <p class="my-3">Tell other parents and make thier life easy as yours</p>
-     
-    </div>
    </div>
   </div>
 
+
+  <!--Add member Modal -->
+  <div class="modal fade" id="addFamily" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+   <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+     <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLongTitle">Add Member</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+       <span aria-hidden="true">&times;</span>
+      </button>
+     </div>
+     <div class="modal-body">
+      <form>
+       <div class="form-row">
+        <div class="col">
+         <input type="text" class="form-control" placeholder="First name">
+        </div>
+        <div class="col">
+         <input type="text" class="form-control" placeholder="Last name">
+        </div>
+       </div>
+
+       <div class="form-row mt-3">
+
+        <div class="col">
+         <label>Gender</label>
+         <div class="row">
+          <div class="col-md-4">
+           <div class="custom-control custom-radio">
+            <input type="radio" id="male" name="gender" class="custom-control-input">
+            <label class="custom-control-label" for="male">Male</label>
+           </div>
+          </div>
+
+          <div class="col-md-6">
+           <div class="custom-control custom-radio">
+            <input type="radio" id="female" name="gender" class="custom-control-input">
+            <label class="custom-control-label" for="female">Female</label>
+           </div>
+          </div>
+
+         </div>
+        </div>
+
+        <div class="col">
+         <label>Birthday</label>
+         <input type="date" class="form-control" placeholder="Last name">
+        </div>
+       </div>
+      </form>
+     </div>
+     <div class="modal-footer">
+      <button type="button" class="btn btn-default">Save changes</button>
+     </div>
+    </div>
+   </div>
+  </div>
+  
+  
+  <!--Add pregnancy Modal -->
+  <div class="modal fade" id="addFamily" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+   <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+     <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLongTitle">Add Pregnancy</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+       <span aria-hidden="true">&times;</span>
+      </button>
+     </div>
+     <div class="modal-body">
+      <form>
+       <div class="form-row">
+        <div class="col">
+         <input type="text" class="form-control" placeholder="First name">
+        </div>
+        <div class="col">
+         <input type="text" class="form-control" placeholder="Last name">
+        </div>
+       </div>
+
+       <div class="form-row mt-3">
+
+        <div class="col">
+         <label>Gender</label>
+         <div class="row">
+          <div class="col-md-4">
+           <div class="custom-control custom-radio">
+            <input type="radio" id="male" name="gender" class="custom-control-input">
+            <label class="custom-control-label" for="male">Male</label>
+           </div>
+          </div>
+
+          <div class="col-md-6">
+           <div class="custom-control custom-radio">
+            <input type="radio" id="female" name="gender" class="custom-control-input">
+            <label class="custom-control-label" for="female">Female</label>
+           </div>
+          </div>
+
+         </div>
+        </div>
+
+        <div class="col">
+         <label>Birthday</label>
+         <input type="date" class="form-control" placeholder="Last name">
+        </div>
+       </div>
+      </form>
+     </div>
+     <div class="modal-footer">
+      <button type="button" class="btn btn-default">Save changes</button>
+     </div>
+    </div>
+   </div>
+  </div>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>

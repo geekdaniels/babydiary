@@ -82,6 +82,12 @@ body{
  color: #fff;
 }
 
+.btn-signup:hover{
+ background: #6F99C2;
+ box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.1);
+ color: #fff;
+}
+
 #diary-color{
  color: #EB62A3 !important;
 }

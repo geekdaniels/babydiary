@@ -7,6 +7,8 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/onboarding.css">
+  <link rel="stylesheet" href="css/datepicker.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
  </head>
 
@@ -103,24 +105,25 @@
        </div>
       </section>
 
-      <!--Gender form ends here-->
+      <!--baby/pregnancy form ends here-->
       <section v-if="step === 2" style="margin-top: 80px !important;">
+
        <div class="form-group my-3">
-        <label style="bottom: 124px">Gender of child</label>
+        <label style="bottom: 132px">Expecting a baby/ Have a child?</label>
         <div class="row">
          <div class="col p-4">
           <div class="text-center">
-           <a href="" class="no-text-decoration" ><img src="img/masculine.png" alt="male" />
-           <p class="text-default text-center m-2">Male</p></a>
+           <a @click.prevent="child" href="" class="no-text-decoration" ><img src="img/baby%20boy.png" alt="child" />
+            <p class="text-default text-center m-2">Child</p></a>
           </div>
          </div>
          <div class="col p-4">
           <div class="text-center">
-           <a href="" class="no-text-decoration" >
-            <img src="img/femenine.png" alt="female" />
-           <p class="text-default text-center m-2">Female</p>
+           <a @click.prevent="pregnant" href="" class="no-text-decoration" >
+            <img src="img/pregnant.png" alt="pregnant" />
+            <p class="text-default text-center m-2">Pregnant</p>
            </a>
-           
+
           </div>
          </div>
         </div>
@@ -128,19 +131,131 @@
 
        <div class="row">
         <div class="col my-3 text-center">
-        <button @click.prevent="back" class="btn btn-signup rounded-0">BACK</button>
+         <button @click.prevent="back" class="btn btn-signup rounded-0">BACK</button>
+        </div>
+        <div v-if="registration_data.status" class="col my-3 text-center">
+         <button @click.prevent="stage" class="btn btn-signup rounded-0">NEXT</button>
+        </div>
+        <div v-if="registration_data.child" class="col my-3 text-center">
+         <button @click.prevent="next" class="btn btn-signup rounded-0">NEXT</button>
+        </div>
        </div>
-       <div class="col my-3 text-center">
-        <button @click.prevent="finish" class="btn btn-signup rounded-0">FINISH</button>
-       </div>
-       </div>
-        
-       
+
       </section>
+
+      <!--Gender form ends here-->
+      <section v-if="step === 3" style="margin-top: 80px !important;">
+       <div class="form-group my-3">
+        <label style="bottom: 124px">Gender of child</label>
+        <div class="row">
+         <div class="col p-4">
+          <div class="text-center">
+           <a href="" class="no-text-decoration" ><img src="img/masculine.png" alt="male" />
+            <p class="text-default text-center m-2">Male</p></a>
+          </div>
+         </div>
+         <div class="col p-4">
+          <div class="text-center">
+           <a href="" class="no-text-decoration" >
+            <img src="img/femenine.png" alt="female" />
+            <p class="text-default text-center m-2">Female</p>
+           </a>
+
+          </div>
+         </div>
+        </div>
+       </div>
+
+       <div class="form-group my-4">
+        <label>Child Name</label>
+        <input v-model="registration_data.childname" type="text" class="form-control input-lg" />
+       </div>
+
+       <div class="row">
+        <div class="col my-3 text-center">
+         <button @click.prevent="back" class="btn btn-signup rounded-0">BACK</button>
+        </div>
+        <div class="col my-3 text-center">
+         <button @click.prevent="submit" class="btn btn-signup rounded-0">FINISH</button>
+        </div>
+       </div>
+
+
+      </section>
+
+
+      <!--day of delivery form ends here-->
+      <section v-if="step === 4" style="margin-top: 80px !important;">
+       <div class="form-group my-3">
+        <label style="bottom: 100px">Expected Day of Delievery</label>
+        <div class="row">
+         <div class="col p-4">
+          <div class="input-group">
+           <!--           <input data-toggle="datepicker" type="text" class="form-control docs-date" name="date" placeholder="Pick a date" style="height: 3rem">-->
+           <date-picker type="text" class="form-control docs-date" name="date" placeholder="Pick a date" style="height: 3rem"></date-picker>
+           <div class="input-group-append">
+            <button type="button" class="btn btn-outline-secondary docs-datepicker-trigger" disabled>
+             <i class="far fa-calendar-alt" aria-hidden="true"></i>
+            </button>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <!--data-toggle="datepicker" -->
+       <p class="text-default text-center">OR</p>
+
+       <div class="col mb-4">
+        <button @click.prevent="next" class="btn btn-signup btn-block rounded-0">USE LAST PERIOD CYCLE</button>
+       </div>
+
+       <div class="col mb-4">
+        <button @click="next" class="btn btn-signup btn-block rounded-0">FINISH</button>
+       </div>
+
+      </section>
+
+
+      <!--LAST PERIOD CYCLE form ends here-->
+      <section v-if="step === 5" style="margin-top: 80px !important;">
+
+       <div data-toggle="datepicker"></div>
+       <div class="form-group my-3">
+        <label style="bottom: 100px">LAST PERIOD CYCLE</label>
+        <div class="row">
+         <div class="col p-4">
+          <div class="input-group">
+           <!--           <input data-toggle="datepicker" type="text" class="form-control docs-date" name="date" placeholder="Pick a date" style="height: 3rem">-->
+           <date-picker type="text" class="form-control docs-date" name="date" placeholder="Pick a date" style="height: 3rem"></date-picker>
+           <div class="input-group-append">
+            <button type="button" class="btn btn-outline-secondary docs-datepicker-trigger" disabled>
+             <i class="far fa-calendar-alt" aria-hidden="true"></i>
+            </button>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+
+       <p class="text-default text-center">OR</p>
+
+       <div class="col mb-4">
+        <button @click.prevent="back"  class="btn btn-signup btn-block rounded-0">BACK</button>
+       </div>
+
+       <div class="col mb-4">
+        <button @click.prevent="submit" class="btn btn-signup btn-block rounded-0">FINISH</button>
+       </div>
+
+      </section>
+
+
 
      </form>
     </div>
    </div>
+
+   <!--   <input data-toggle="datepicker" type="text" class="form-control docs-date" name="date" placeholder="Pick a date" style="height: 3rem">-->
   </div>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
@@ -149,18 +264,29 @@
   <!-- development version, includes helpful console warnings -->
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script>
+   Vue.component('date-picker', {
+
+    template: `<input />`,
+    props: [ 'datepicker' ],
+    mounted: function() {
+     $(this.$el).datepicker();
+     datepicker: this.datepicker
+    }
+   });
    new  Vue({
     el : '#diary-app',
     data(){
      return{
       step: 1,
       registration_data : {
-      firstname : null,
-      lastname : null,
-      gender : null,
-      pin : null,
-      babygender : null
-     }
+       firstname : null,
+       lastname : null,
+       gender : null,
+       pin : null,
+       child : null,
+       status : null,
+       babygender : null
+      }
      }
     },
     methods : {
@@ -171,12 +297,40 @@
       this.step--;
      },
      finish : function(){
-//      this.registration_data.push()
+      //      this.registration_data.push()
       let details = JSON.stringify(this.registration_data);
       console.log(details);
+     },
+     child : function(){
+      this.registration_data.child = 'child';
+      this.registration_data.status = null;
+      let details = JSON.stringify(this.registration_data);
+      console.log(details);
+     },
+     pregnant : function(){
+      this.registration_data.status = 'pregnant';
+      this.registration_data.child = null;
+      let details = JSON.stringify(this.registration_data);
+      console.log(details);
+     },
+     stage : function(){
+      this.step = 4;
      }
     }
    })
+  </script>
+
+  <script src="js/datepicker.js"></script>
+  <script>
+
+   $('[data-toggle="datepicker"]').datepicker();
+
+   //   $(function() {
+   //    $('[data-toggle="datepicker"]').datepicker({
+   //     autoHide: true,
+   //     zIndex: 2048,
+   //    });
+   //   });
   </script>
 
  </body>

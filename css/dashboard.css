@@ -26,7 +26,20 @@ div.top{
  top: 15px;
  position: relative;
 }
-
+.btn{
+ font-size: 14px !important
+}
+.btn-default{
+ background: #EB62A3;
+ box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.1);
+ color: #fff;
+}
+.btn-default:hover{
+ background: #EB62A3;
+ box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.1);
+ color: #fff;
+ border-color: #F591C0;
+}
 .diary-card{
  background: #FFFFFF !important;
  box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.08) !important; 
@@ -38,6 +51,18 @@ div.top{
  background-color: #E7ECED;
  border-top-left-radius: 10px !important;
  border-top-right-radius: 10px !important;
+}
+.card-bg-footer{
+ background: #EB62A3;
+ border-bottom-left-radius: 10px !important;
+ border-bottom-right-radius: 10px !important;
+}
+.diary-center-border-2{
+ color: #4F4F4F;
+ border: 2px solid #E7ECED;
+ box-sizing: border-box;
+ box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.08);
+ border-radius: 10px;
 }
 .diary-center-border{
  color: #4F4F4F;
