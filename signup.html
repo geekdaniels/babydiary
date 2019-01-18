@@ -6,7 +6,7 @@
   <title>Baby diary | SignIn</title>
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/onboarding.css">
 
  </head>
 
@@ -42,60 +42,102 @@
 
   <!--   navigation ends-->
 
-  <div class="container mt-3">
+  <div class="container mt-3" id="diary-app">
    <div class="row justify-content-center">
     <div class="col-md-3 border border-light log-box">
      <span class="img-right"><img src="img/image-right.png" /></span>
      <span class="img-left"><img src="img/image-left.png" /></span>
-     <p class="text-center mt-5 mb-4" style="margin-top: 50px !important;">Register to create account <img src="img/happy.png" alt="happy smiley" /></p>
-
      <form>
-      <div class="form-group my-2">
-       <label>First Name</label>
-       <input type="text" class="form-control input-lg" />
-      </div>
 
-      <div class="form-group my-4">
-       <label>Last Name</label>
-       <input type="text" class="form-control input-lg" />
-      </div>
+      <!--      signup form ends here-->
 
-      <div class="form-group my-4" >
-       <label style="bottom: 42px" >Gender</label>
-       <select class="form-control" style="height: calc(2.25rem + 2px);">
-        <option>Male</option>
-        <option>Female</option>
-       </select>
-      </div>
-
-      <div class="form-group my-4">
-       <label>Create Four Digit PIN</label>
-       <input type="password" class="form-control input-lg" />
-      </div>
-
-      <div class="form-group mt-4">
-       <label>Comfirm PIN</label>
-       <input type="password" class="form-control input-lg" />
-      </div>
+      <section v-if="step === 1">
+       <p class="text-center mt-5 mb-4" style="margin-top: 50px !important;">Register to create account <img src="img/happy.png" alt="happy smiley" /></p>
 
 
-      <div class="col my-3">
-       <small class="text-center">By creating your Nurturey account you confirm that you
-        agree with Baby Diary’s Terms of Service.
-       </small>
-      </div>
+       <div class="form-group my-2">
+        <label>First Name</label>
+        <input v-model="registration_data.firstname" type="text" class="form-control input-lg" />
+       </div>
 
-      <div class="col">
-       <button class="btn btn-signup btn-block rounded-0">SIGN UP</button>
-      </div>
+       <div class="form-group my-4">
+        <label>Last Name</label>
+        <input v-model="registration_data.lastname" type="text" class="form-control input-lg" />
+       </div>
 
-      <div class="col my-3">
-       <p class="text-center">Already have an account?</p>
-      </div>
+       <div class="form-group my-4" >
+        <label style="bottom: 42px" >Gender</label>
+        <select class="form-control" style="height: calc(2.25rem + 2px);">
+         <option>Male</option>
+         <option>Female</option>
+        </select>
+       </div>
 
-      <div class="col mb-4">
-       <button class="btn btn-signup btn-block rounded-0">SIGN IN</button>
-      </div>
+       <div class="form-group my-4">
+        <label>Create Four Digit PIN</label>
+        <input v-model="registration_data.pin" type="password" class="form-control input-lg" />
+       </div>
+
+       <div class="form-group mt-4">
+        <label>Comfirm PIN</label>
+        <input type="password" class="form-control input-lg" />
+       </div>
+
+
+       <div class="col my-3">
+        <small class="text-center">By creating your Nurturey account you confirm that you
+         agree with Baby Diary’s Terms of Service.
+        </small>
+       </div>
+
+       <div class="col">
+        <button @click.prevent="next" class="btn btn-signup btn-block rounded-0">SIGN UP</button>
+       </div>
+
+       <div class="col my-3">
+        <p class="text-center">Already have an account?</p>
+       </div>
+
+       <div class="col mb-4">
+        <button  class="btn btn-signup btn-block rounded-0">SIGN IN</button>
+       </div>
+      </section>
+
+      <!--Gender form ends here-->
+      <section v-if="step === 2" style="margin-top: 80px !important;">
+       <div class="form-group my-3">
+        <label style="bottom: 124px">Gender of child</label>
+        <div class="row">
+         <div class="col p-4">
+          <div class="text-center">
+           <a href="" class="no-text-decoration" ><img src="img/masculine.png" alt="male" />
+           <p class="text-default text-center m-2">Male</p></a>
+          </div>
+         </div>
+         <div class="col p-4">
+          <div class="text-center">
+           <a href="" class="no-text-decoration" >
+            <img src="img/femenine.png" alt="female" />
+           <p class="text-default text-center m-2">Female</p>
+           </a>
+           
+          </div>
+         </div>
+        </div>
+       </div>
+
+       <div class="row">
+        <div class="col my-3 text-center">
+        <button @click.prevent="back" class="btn btn-signup rounded-0">BACK</button>
+       </div>
+       <div class="col my-3 text-center">
+        <button @click.prevent="finish" class="btn btn-signup rounded-0">FINISH</button>
+       </div>
+       </div>
+        
+       
+      </section>
+
      </form>
     </div>
    </div>
@@ -103,7 +145,39 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
-  <script src=""></script>
+
+  <!-- development version, includes helpful console warnings -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+   new  Vue({
+    el : '#diary-app',
+    data(){
+     return{
+      step: 1,
+      registration_data : {
+      firstname : null,
+      lastname : null,
+      gender : null,
+      pin : null,
+      babygender : null
+     }
+     }
+    },
+    methods : {
+     next : function(){
+      this.step++;
+     },
+     back : function(){
+      this.step--;
+     },
+     finish : function(){
+//      this.registration_data.push()
+      let details = JSON.stringify(this.registration_data);
+      console.log(details);
+     }
+    }
+   })
+  </script>
 
  </body>
 </html>

@@ -1,0 +1,58 @@
+body{
+ font-family: 'Poppins', sans-serif !important;
+ font-size: 14px !important;
+}
+
+.diary-default-bg{
+ background: #EB62A3;
+}
+
+.nav-link{
+ font-size: 12px !important;
+}
+
+.divider{
+ background: #C4C4C4;
+ height: 1px;
+}
+
+div.top{
+ background: #376B9D;
+ height: 55px;
+ position: absolute;
+}
+
+.section{
+ top: 15px;
+ position: relative;
+}
+
+.diary-card{
+ background: #FFFFFF !important;
+ box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.08) !important; 
+ border-radius: 10px !important;
+ margin: 15px;
+}
+
+.card-head{
+ background-color: #E7ECED;
+ border-top-left-radius: 10px !important;
+ border-top-right-radius: 10px !important;
+}
+.diary-center-border{
+ color: #4F4F4F;
+ border: 2px solid #E7ECED;
+ box-sizing: border-box;
+ box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.08);
+}
+.text-default{
+ color: #828282;
+}
+.border-3{
+ border: 1px solid #729CC5;
+ border-radius: 10px;
+}
+.text-default > img{
+ vertical-align: middle;
+ margin-bottom: 0.4em;/
+}

@@ -10,7 +10,9 @@ body{
  background-position: center;
  min-height: 125vh;
 }
-
+.text-default{
+ color: #828282;
+}
 .signup-bg{
  background-image: url(../img/signup-bg.png);
  background-repeat: no-repeat;
@@ -82,4 +84,8 @@ body{
 
 #diary-color{
  color: #EB62A3 !important;
+}
+
+.no-text-decoration{
+ text-decoration: none !important;
 }
