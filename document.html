@@ -74,21 +74,14 @@
       </div>
 
       <div class="offset-md-4 col-md-2">
-       <button type="button" class="btn btn-large btn-grey m-2" data-toggle="modal" data-target="#measurement">Add</button>
+       <button type="button" class="btn btn-large btn-grey m-2" data-toggle="modal" data-target="#measurement">Upload</button>
       </div>
 
      </div>
     </div>
 
     <div class="col-md-3 diary-card r-position" style="right: 0px;">
-     <h5 class="text-center p-3 text-default">DISCLAIMER</h5>
-
-     <p class="small">Please do not consider the immunisations mentioned or marked as popular in the list as advice.</p>
-
-     <p class="small">You must consult your doctor in deciding the appropriate immunisations required by your child. The estimated due dates are also based on tentative calculations, and you must consult your doctor to find out appropriate schedule.</p>
-
-     <p class="small">Our Immunisation data is based on ***************** recommended schedules.</p>
-
+     <h6 class="text-center p-3 text-default">KEEP YOUR DOCUMENTS UPDATED!</h6>
     </div>
 
    </div>
@@ -104,56 +97,18 @@
       <div class="row justify-content-center">
        <div class="col-md-11 p-2 m-2 measurment-center-border">
 
-        <div class="row justify-content-center">
-         <div class="col-md-2 border-right-measurement">
-          <div class="text-center">
-           <img src="img/height.png" alt="height" />
-          </div>
-          <p class="small font-9 text-center mt-1 mb-0">No record</p>
-         </div>
-
-         <div class="col-md-2 border-right-measurement">
-          <div class="text-center">
-           <img src="img/weight.png" alt="height" style="margin-top: 5px" />
-          </div>
-          <p class="small font-9 text-center mt-1 mb-0">No record</p>
-         </div>
-
-         <div class="col-md-2 border-right-measurement">
-          <div class="text-center">
-           <img src="img/bmi.png" alt="height" style="margin-top: 17px" />
-          </div>
-          <p class="small font-9 text-center mt-1 mb-0">No record</p>
-         </div>
-
-         <div class="col-md-2 border-right-measurement">
-          <div class="text-center">
-           <img src="img/head.png" alt="height" style="margin-top: 5px"/>
-          </div>
-          <p class="small font-9 text-center mt-1 mb-0">No record</p>
-         </div>
-
-         <div class="col-md-2">
-          <div class="text-center">
-           <img src="img/waist.png" alt="height" style="margin-top: 14px" />
-          </div>
-          <p class="small font-9 text-center mt-1 mb-0">No record</p>
-         </div>
-        </div>
-
         <div class="row justify-content-center mt-3">
          <div class="col-md-11 measurement-border">
-          <p class="p-2 text-dark">Measurement record</p>
+          <p class="p-2 text-dark">Documents</p>
 
           <table class="table measure">
            <thead>
             <tr>
-             <th scope="col" class="font-9">Date</th>
-             <th scope="col" class="font-9">Height</th>
-             <th scope="col" class="font-9">Weight</th>
-             <th scope="col" class="font-9">BMI</th>
-             <th scope="col" class="font-9">Head CF</th>
-             <th scope="col" class="font-9">Waist</th>
+             <th scope="col" class="font-9">Serial No.</th>
+             <th scope="col" class="font-9">Name</th>
+             <th scope="col" class="font-9">Type</th>
+             <th scope="col" class="font-9">Last Modified</th>
+
             </tr>
            </thead>
            <tbody>
@@ -162,16 +117,14 @@
              <td>Mark</td>
              <td>Otto</td>
              <td>@mdo</td>
-             <td>15</td>
-             <td>20</td>
+
             </tr>
             <tr>
              <th scope="row">2</th>
              <td>Jacob</td>
              <td>Thornton</td>
              <td>@fat</td>
-             <td>15</td>
-             <td>20</td>
+
             </tr>
 
            </tbody>
@@ -183,7 +136,6 @@
 
       </div>
      </div>
-
 
 
     </div>
@@ -199,7 +151,7 @@
    <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
      <div class="modal-header">
-      <h5 class="modal-title" id="exampleModalLongTitle">Select administered immunisations</h5>
+      <h5 class="modal-title" id="exampleModalLongTitle">Upload document</h5>
       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
        <span aria-hidden="true">&times;</span>
       </button>
@@ -209,13 +161,16 @@
 
        <div class="form-row justify-content-center my-3">
         <div class="col">
-         <label for="">Height</label>
-         <input type="text" class="form-control floating-label" placeholder="">
+         <input type="text" class="form-control floating-label" placeholder="Document name">
         </div>
 
         <div class="col">
-         <label for="">Weight</label>
-         <input type="text" class="form-control floating-label" placeholder="">
+         <select class="form-control" id="">
+          <option>General</option>
+          <option>School Related</option>
+          <option>Health</option>
+          <option>Award of Honour</option>
+         </select>
         </div>
 
        </div>
@@ -223,30 +178,17 @@
 
        <div class="form-row justify-content-center my-3">
         <div class="col">
-         <label for="">Head Circumference</label>
-         <input type="text" class="form-control floating-label" placeholder="">
+         <div class="upload-btn-wrapper">
+          <button class="btn-upload">Choose a file</button>
+          <input type="file" name="myfile" />
+         </div>
         </div>
-
-        <div class="col">
-         <label for="">Waist</label>
-         <input type="text" class="form-control floating-label" placeholder="">
-        </div>
-
-       </div>
-
-       <div class="form-row my-3">
-
-        <div class="col-md-6">
-         <label for="">BMI</label>
-         <input class="form-control" type="text" placeholder="" />
-        </div>
-
        </div>
 
       </form>
      </div>
      <div class="modal-footer">
-      <button type="button" class="offset-md-2 btn btn-default px-4">Done</button>  
+      <button type="button" class="offset-md-2 btn btn-grey px-4">Upload</button>  
      </div>
     </div>
    </div>
