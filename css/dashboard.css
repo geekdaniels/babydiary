@@ -1,6 +1,7 @@
 body{
  font-family: 'Poppins', sans-serif !important;
  font-size: 14px !important;
+ background-color: #F6F6F6 !important;
 }
 h1,h2,h3,h4,h5,h6{
  font-family: 'Poppins', sans-serif !important;
@@ -207,4 +208,8 @@ div.top{
  left: 0;
  top: 0;
  opacity: 0;
+}
+
+.bg-white{
+ background-color: #ffffff;
 }
