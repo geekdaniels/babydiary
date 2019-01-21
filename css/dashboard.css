@@ -27,7 +27,7 @@ div.top{
  position: relative;
 }
 .btn{
- font-size: 14px !important
+ font-size: 12px !important
 }
 .btn-default{
  background: #EB62A3;
@@ -80,4 +80,38 @@ div.top{
 .text-default > img{
  vertical-align: middle;
  margin-bottom: 0.4em;/
+}
+.calender::before {
+ content: url(../img/Calendar%20icon.png);
+}
+.r-position{
+ position: absolute;
+}
+
+.top-menu{
+ right: 10px;
+ top: 15px;
+}
+
+.feed-item{
+ position: absolute;
+ will-change: transform;
+ top: 0px;
+ left: 0px;
+ transform: translate3d(315px, 31px, 0px) !important;
+}
+.color-2{
+ color: #4F4F4F !important;
+}
+
+.color-3{
+ color: #0B0A0A;
+}
+
+.font-12{
+ font-size: 12px !important;
+}
+.quickadd{
+ background: #ECECEC;
+ box-shadow: 0px 4.82243px 4.82243px rgba(0, 0, 0, 0.25)
 }

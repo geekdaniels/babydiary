@@ -33,6 +33,7 @@
        <li class="nav-item active px-md-4">
         <a class="nav-link text-white" href="index.html"><img class="py-1" src="img/notification_icon.png" alt="notification icon"  /></a>
        </li>
+
        <li class="nav-item dropdown px-md-4">
         <a class="nav-link text-white dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
          Adeleke &nbsp<img src="img/user.png" alt="user profile" width="25" />
@@ -51,6 +52,7 @@
     </nav>
    </div>
   </div>
+
   <!--   navigation ends-->
 
   <div class="container-fluid top">
@@ -58,33 +60,96 @@
   </div>
 
   <div class="container section">
+
    <div class="row">
     <div class="col-md-3 diary-card">
      <p class="text-default font-weight-bold py-3"><img src="img/Family.png" alt="family" /> MY FAMILY</p>
     </div>
 
     <div class="col-md-5 px-0 diary-card">
-     <div class="card-head">
-      <p class="text-center p-3">Follow steps below for a quick start</p>
+     <div class="row">
+      <div class="col-md-5">
+       <p class="p-3 text-default"><img src="img/dashboard.png" alt="family" /> DASHBOARD</p>
+      </div>
+
+      <div class="offset-md-2 col-md-5">
+       <button type="button" class="btn btn-large btn-default m-2" data-toggle="modal" data-target="#addMoment"><img src="img/add-member.png" />Create a moment</button>
+      </div>
      </div>
-     <div class="p-2 m-3 diary-center-border">
-      <p class="mb-1 font-weight-bold">Update profile to access our features</p>
-      <p class="small">Filling the required information enables you to enjoy our services.</p>
-      <img src="img/status.png" alt="status" class="img-fluid" />
-      <p class="small">20% completed.</p>
-     </div>
+
     </div>
 
     <div class="col-md-3 diary-card">
-     <p class=" text-center p-3">Share the joy</p>
-     <div class="border-3 p-2">
-      <p class="text-default mb-0"><img src="img/Shape-invite.png" class="mb-0 mr-2" />Invite friend to baby diary</p>
-     </div>
-     <p class="my-3">Tell other parents and make thier life easy as yours</p>
 
     </div>
    </div>
+
+
+   <div class="row justify-content-center">
+
+
+    <div class="col-md-5 px-0 diary-card">
+     <div class="">
+      <div class="row">
+       <div class="col-md-10">
+        <p class="pt-3 pl-2 pb-0 mb-0 text-default"><img style="margin-bottom: 5px" src="img/Calendar%20icon.png" width="20px" /> Post from Moments</p>
+        <small class="ml-4 pl-1 text-default">13 Nov 2018</small>
+        <p class="ml-4 px-1 my-0 font-weight-bold text-default">
+         Tunde has started saying 'Mama' and 'Dada'
+        </p>
+       </div>
+       <a class="" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <img src="img/menu.png" class="r-position top-menu" alt="menu" />
+       </a>
+
+       <div class="dropdown-menu feed-item" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="#">Edit</a>
+        <div class="divider"></div>
+        <a class="dropdown-item" href="#">Remove</a>
+       </div>
+
+      </div>
+     </div>
+
+     <div class="p-2 m-3 diary-center-border">
+      <img class="img-fluid" src="img/baby_img.png" alt="baby boy" />
+     </div>
+    </div>
+
+   </div>
+
   </div>
+
+  <!--Add member Modal -->
+  <div class="modal fade" id="addMoment" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+   <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+     <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLongTitle">Timeline Title</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+       <span aria-hidden="true">&times;</span>
+      </button>
+     </div>
+     <div class="modal-body">
+      <form>
+       <div class="form-row">
+        <div class="col">
+         <textarea class="form-control" placeholder="Description">
+
+         </textarea>
+         <input type="file" class="my-3" />
+        </div>
+       </div>
+
+      </form>
+     </div>
+     <div class="modal-footer">
+      <button type="button" class="offset-md-2 btn btn-default px-4">Submit</button>  
+     </div>
+    </div>
+   </div>
+  </div>
+
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>

@@ -3,13 +3,12 @@
  <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Baby diary | SignIn</title>
+  <title>Baby diary | Manage Family</title>
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/dashboard.css">
   <link rel="stylesheet" href="css/datepicker.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-
  </head>
 
  <body class="">
@@ -69,12 +68,13 @@
       </div>
 
       <div class="offset-md-3 col-md-3">
-       <button type="button" class="btn btn-large btn-default my-2" ><img src="img/create-family.png" alt="add family" /> Create a new family</button>
+       <button type="button" class="btn btn-large btn-default my-2" data-toggle="modal" data-target="#addFamily"><img src="img/add-member.png" /> Add member</button>
       </div>
 
       <div class="col-md-3">
-       <button class="btn btn-large btn-default my-2"><img src="img/family%20icon.png" /> Join an existing family</button>
+       <button class="btn btn-large btn-default my-2" data-toggle="modal" data-target="#addPregnancy"><img src="img/add-pregnanvy.png" /> Add pregnancy</button>
       </div>
+
      </div>
     </div>
    </div>
@@ -90,15 +90,6 @@
         <p class="text-default p-3 mb-0"> My Family<br>
          <span class="small">Family ID : 7552288</span>
         </p>
-
-       </div>
-
-       <div class="offset-md-3 col-md-3">
-        <button type="button" class="btn btn-large btn-default my-2" data-toggle="modal" data-target="#addFamily"><img src="img/add-member.png" /> Add member</button>
-       </div>
-
-       <div class="col-md-3">
-        <button class="btn btn-large btn-default my-2" data-toggle="modal" data-target="#addPregnancy"><img src="img/add-pregnanvy.png" /> Add pregnancy</button>
        </div>
       </div>
      </div>
@@ -177,7 +168,7 @@
       </form>
      </div>
      <div class="modal-footer">
-      <button type="button" class="btn btn-default">Save changes</button>
+      <button type="button" class="btn btn-default">Add Family</button>
      </div>
     </div>
    </div>
@@ -207,15 +198,6 @@
             <input type="radio" id="Last_cycle" name="delivery" class="custom-control-input">
             <label class="custom-control-label" for="Last_cycle">Last cycle period</label>
            </div>
-
-           <div class="input-group my-4">
-            <input data-toggle="datepicker" type="text" class="form-control docs-date" name="date" placeholder="Pick a date" style="height: 3rem">
-            <div class="input-group-append">
-             <button type="button" class="btn btn-outline-secondary docs-datepicker-trigger" disabled>
-              <i class="far fa-calendar-alt" aria-hidden="true"></i>
-             </button>
-            </div>
-           </div>
           </div>
 
           <div class="col-md-6">
@@ -223,7 +205,11 @@
             <input type="radio" id="Expected_date" name="delivery" class="custom-control-input">
             <label class="custom-control-label" for="Expected_date">Expected date of delivery</label>
            </div>
+          </div>
+         </div>
 
+         <div class="row">
+          <div class="col-md-12">
            <div class="input-group my-4">
             <input data-toggle="datepicker" type="text" class="form-control docs-date" name="date" placeholder="Pick a date" style="height: 3rem">
             <div class="input-group-append">
@@ -232,21 +218,22 @@
              </button>
             </div>
            </div>
-
           </div>
-
          </div>
+
         </div>
 
        </div>
       </form>
      </div>
      <div class="modal-footer">
-      <button type="button" class="btn btn-default">Save changes</button>
+      <button type="button" class="btn btn-default">Save pregnancy</button>
      </div>
     </div>
    </div>
   </div>
+
+
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
