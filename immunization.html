@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baby diary | Moments</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/bootstrap-material-datetimepicker.css"/>
+ </head>
+
+ <body class="">
+  <div class="container-fliud diary-default-bg">
+   <div class="container" >
+    <nav class="navbar navbar-expand-lg navbar-light ">
+     <a class="navbar-brand" href="#"><img src="img/Baby's%20Dairy%20logo%20white.png" alt="Bbaydiary logo" width="45px"/></a>
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+     </button>
+     <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+       <li class="nav-item active px-md-4">
+        <a class="nav-link text-white" href="index.html">Home <span class="sr-only">(current)</span></a>
+       </li>
+       <li class="nav-item px-md-4">
+        <a class="nav-link text-white" href="blog.html">My family</a>
+       </li>
+
+      </ul>
+
+      <ul class="navbar-nav ml-auto">
+       <li class="nav-item active px-md-4">
+        <a class="nav-link text-white" href="index.html"><img class="py-1" src="img/notification_icon.png" alt="notification icon"  /></a>
+       </li>
+
+       <li class="nav-item dropdown px-md-4">
+        <a class="nav-link text-white dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Adeleke &nbsp<img src="img/user.png" alt="user profile" width="25" />
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+         <a class="dropdown-item" href="#">Settings</a>
+         <div class="divider"></div>
+         <a class="dropdown-item" href="#">Invite Friends</a>
+         <div class="divider"></div>
+         <a class="dropdown-item" href="#">Sign Out</a>
+        </div>
+       </li>
+
+      </ul>
+     </div>
+    </nav>
+   </div>
+  </div>
+
+  <!--   navigation ends-->
+
+  <div class="container-fluid top">
+
+  </div>
+
+  <div class="container section">
+
+   <div class="row">
+    <div class="col-md-3 diary-card">
+     <p class="text-default font-weight-bold py-3 mb-0"><img src="img/Family.png" alt="family" /> MY FAMILY</p>
+    </div>
+
+    <div class="col-md-5 px-0 diary-card">
+     <div class="row">
+
+      <div class="col-md-5">
+       <p class="p-3 text-default"><img src="img/syringe.png" alt="family" /> IMMUNIZATION</p>
+      </div>
+
+      <div class="offset-md-4 col-md-2">
+       <button type="button" class="btn btn-large btn-default m-2" data-toggle="modal" data-target="#addImmunisation">Add</button>
+      </div>
+
+     </div>
+    </div>
+
+    <div class="col-md-3 diary-card r-position" style="right: 0px;">
+     <h5 class="text-center p-3 text-default">DISCLAIMER</h5>
+
+     <p class="small">Please do not consider the immunisations mentioned or marked as popular in the list as advice.
+
+      You must consult your doctor in deciding the appropriate immunisations required by your child. The estimated due dates are also based on tentative calculations, and you must consult your doctor to find out appropriate schedule.
+
+      Our Immunisation data is based on ***************** recommended schedules.</p>
+
+    </div>
+
+   </div>
+
+
+   <div class="row justify-content-center">
+
+
+
+    <div class="col-md-5 px-0">
+
+     <div class="row justify-content-center">
+      <div class="col-md-11">
+       <p class="text-center p-2">Welcome, Click “Select” to add administered vaccines to your dashboard.</p>
+      </div>
+
+      <div class="col-md-11 px-2 py-0 m-2 immunization">
+       <h3 class="mb-0 p-2 text-default vacine-pending">PENDING VACCINES </h3>
+      </div>
+     </div>
+
+     <div class="segment">
+      <div class="card-head">
+       <div class="row">
+        <div class="col-md-10">
+         <p class="px-3 p-2 mb-1"><img src="img/Group%202.png" style="margin-bottom: 3px " /> DTaP/IPV(POLIO)/HIB VACCINE</p>
+        </div>
+       </div>
+      </div>
+
+      <div class="row justify-content-center">
+       <div class="col-md-11 px-2 py-0 m-2 immunization">
+        <span><img src="img/exclamation.png" alt="exclamation" /> 6 WEEKS </span>
+        <span class="t"><button type="button" class="offset-md-6 btn btn-default px-4 py-1 ">Select</button>  <a href="#"><img src="img/delete.png" alt="delete" class="" /></a></span>
+       </div>
+
+      </div>
+     </div>
+
+     <div class="segment">
+      <div class="card-head">
+       <div class="row">
+        <div class="col-md-10">
+         <p class="px-3 p-2 mb-1"><img src="img/Group%202.png" style="margin-bottom: 3px " /> DTaP/IPV(POLIO)/HIB VACCINE</p>
+        </div>
+       </div>
+      </div>
+
+      <div class="row justify-content-center">
+       <div class="col-md-11 px-2 py-0 m-2 immunization">
+        <span><img src="img/exclamation.png" alt="exclamation" /> 6 WEEKS </span>
+        <span class="t"><button type="button" class="py-1 offset-md-6 btn btn-default px-4 ">Select</button>  <a href="#"><img src="img/delete.png" alt="delete" class="" /></a></span>
+       </div>
+
+      </div>
+     </div>
+
+
+     <div class="row justify-content-center">
+
+      <div class="col-md-11 px-2 py-0 m-2 immunization">
+       <h3 class="mb-0 p-2 text-default vacine-pending">ADMINISTERED VACCINES </h3>
+      </div>
+
+     </div>
+     <div>
+      <div class="card-head">
+       <div class="row">
+        <div class="col-md-10">
+         <p class="px-3 p-2 mb-1"><img src="img/Group%202.png" style="margin-bottom: 3px " /> DTaP/IPV(POLIO)/HIB VACCINE</p>
+        </div>
+       </div>
+      </div>
+
+      <div class="row justify-content-center">
+       <div class="col-md-11 p-2 m-2 immunization">
+        <span><img src="img/verified.png" alt="verified" class="mb-1" /> 6 WEEKS </span>
+        <span class="small offset-md-3"><img src="img/location.png" /> R SAMPLE HOSPITAL, LAGOS 
+         <a href="#"><img src="img/delete.png" alt="delete" class="ml-3 mb-1" width="12px" /></a> 
+
+         <a href="#"><img src="img/edit%202.png" alt="delete" class="ml-3 mb-1" width="12px" /></a>
+        </span>
+       </div>
+
+      </div>
+     </div>
+
+    </div>
+
+
+
+   </div>
+
+  </div>
+
+  <!--Add member Modal -->
+  <div class="modal fade" id="addImmunisation" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+   <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+     <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLongTitle">Select administered immunisaptions</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+       <span aria-hidden="true">&times;</span>
+      </button>
+     </div>
+     <div class="modal-body">
+      <form>
+
+       <div class="form-row my-3">
+
+        <div class="col-md-4">
+         <select class="form-control">
+          <option>At birth</option>
+         </select>
+        </div>
+       </div>
+
+       <div class="form-row justify-content-center my-3">
+        <table class="table table-striped">
+         <thead>
+          <tr>
+
+           <th scope="col">Immunisation</th>
+           <th scope="col">Most popular</th>
+           <th scope="col">Select</th>
+          </tr>
+         </thead>
+         <tbody>
+          <tr>
+           <th scope="row">OPV</th>
+           <td><img src="img/star.png" alt="star" /></td>
+           <td><img src="img/verified-success.png" alt="success" /></td>
+          </tr>
+          <tr>
+           <th scope="row">BCG</th>
+           <td><img src="img/star.png" alt="star" /></td>
+           <td><img src="img/verified-success.png" alt="success" /></td>
+          </tr>
+          <tr>
+           <th scope="row">Hep B</th>
+           <td><img src="img/star.png" alt="star" /></td>
+           <td><img src="img/verified-success.png" alt="success" /></td>
+          </tr>
+         </tbody>
+        </table>
+
+        <div class="col">
+         <label for="">Event starts</label>
+         <input type="text" id="date-format" class="form-control floating-label" placeholder="Begin Date/Time">
+        </div>
+
+        <div class="col">
+         <label for="">Event ends</label>
+         <input type="text" id="date-format" class="form-control floating-label" placeholder="End Date Time">
+        </div>
+
+       </div>
+
+       <div class="form-row my-3">
+
+        <div class="col-md-5">
+         <input class="form-control" type="text" placeholder="Add Hospital" />
+        </div>
+
+       </div>
+
+      </form>
+     </div>
+     <div class="modal-footer">
+      <button type="button" class="offset-md-2 btn btn-default px-4">Done</button>  
+     </div>
+    </div>
+   </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="http://momentjs.com/downloads/moment-with-locales.min.js"></script>
+  <script src="js/bootstrap-material-datetimepicker.js"></script>
+  <script type="text/javascript">
+   $(document).ready(function()
+                     {
+    $('#date').bootstrapMaterialDatePicker
+    ({
+     time: false,
+     clearButton: true
+    });
+
+    $('#time').bootstrapMaterialDatePicker
+    ({
+     date: false,
+     shortTime: false,
+     format: 'HH:mm'
+    });
+
+    $('#date-format').bootstrapMaterialDatePicker
+    ({
+     format: 'dddd DD MMMM YYYY - HH:mm'
+    });
+    $('#date-fr').bootstrapMaterialDatePicker
+    ({
+     format: 'DD/MM/YYYY HH:mm',
+     lang: 'fr',
+     weekStart: 1, 
+     cancelText : 'ANNULER',
+     nowButton : true,
+     switchOnClick : true
+    });
+
+    $('#date-end').bootstrapMaterialDatePicker
+    ({
+     weekStart: 0, format: 'DD/MM/YYYY HH:mm'
+    });
+    $('#date-start').bootstrapMaterialDatePicker
+    ({
+     weekStart: 0, format: 'DD/MM/YYYY HH:mm', shortTime : true
+    }).on('change', function(e, date)
+          {
+     $('#date-end').bootstrapMaterialDatePicker('setMinDate', date);
+    });
+
+    $('#min-date').bootstrapMaterialDatePicker({ format : 'DD/MM/YYYY HH:mm', minDate : new Date() });
+
+    $.material.init()
+   });
+  </script>
+
+
+ </body>
+</html>

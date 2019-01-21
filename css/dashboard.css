@@ -2,7 +2,9 @@ body{
  font-family: 'Poppins', sans-serif !important;
  font-size: 14px !important;
 }
-
+h1,h2,h3,h4,h5,h6{
+ font-family: 'Poppins', sans-serif !important;
+}
 .diary-default-bg{
  background: #EB62A3;
 }
@@ -39,6 +41,17 @@ div.top{
  box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.1);
  color: #fff;
  border-color: #F591C0;
+}
+.btn-grey{
+ background: #C4C4C4;
+ box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.1);
+ color: #4F4F4F;
+}
+.btn-grey:hover{
+ background: #C4C4C4;
+ box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.1);
+ color: #333333;
+ border-color: #333333;
 }
 .diary-card{
  background: #FFFFFF !important;
@@ -114,4 +127,59 @@ div.top{
 .quickadd{
  background: #ECECEC;
  box-shadow: 0px 4.82243px 4.82243px rgba(0, 0, 0, 0.25)
+}
+.form-control {
+ display: block;
+ width: 100%;
+ height: calc(2.25rem + 2px);
+ padding: .375rem .75rem;
+ font-size: 12px !important;
+ font-weight: 400;
+ line-height: 1.5;
+ color: #495057;
+ background-color: #fff;
+ background-clip: padding-box;
+ border: 1px solid #ced4da;
+ border-radius: .25rem;
+ transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.immunization{
+ background: #FFFFFF;
+ box-shadow: -4.32933px 4.32933px 10.8233px rgba(0, 0, 0, 0.08);
+ border-radius: 10.8233px;
+}
+
+.vacine-pending{
+ font-style: normal;
+ font-weight: 500;
+ line-height: 28px;
+ font-size: 18px;
+ letter-spacing: 0.12em;
+}
+
+.font-9{
+ font-size: 9px !important;
+ font-weight: normal
+}
+.font-10{
+ font-size: 10px !important;
+ font-weight: normal
+}
+.border-right-measurement{
+ border-right: 2px solid #C4C4C4;
+}
+
+.measure td{
+ font-size: 11px !important;
+}
+.measurment-center-border{
+ background: #FFFFFF;
+ box-shadow: -4.32933px 4.32933px 10.8233px rgba(0, 0, 0, 0.08);
+ border-radius: 10.8233px;
+}
+.measurement-border{
+ border: 0.5px solid #828282;
+ box-sizing: border-box;
+ border-radius: 10px;
 }

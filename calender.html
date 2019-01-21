@@ -5,11 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Baby diary | Moments</title>
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/dashboard.css">
   <link rel="stylesheet" href="css/ion.rangeSlider.css">
   <link rel="stylesheet" href="css/ion.rangeSlider.skinHTML5.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/bootstrap-material-datetimepicker.css"/>
+
  </head>
 
  <body class="">
@@ -71,11 +73,11 @@
     <div class="col-md-5 px-0 diary-card">
      <div class="row">
       <div class="col-md-5">
-       <p class="p-3 text-default"><img src="img/moment_icon.png" alt="family" /> MOMENTS</p>
+       <p class="p-3 text-default"><img src="img/Calendar%20icon.png" alt="family" /> CALENDER</p>
       </div>
 
-      <div class="offset-md-2 col-md-5">
-       <button type="button" class="btn btn-large btn-default m-2" data-toggle="modal" data-target="#addMoment">Add Moment</button>
+      <div class="offset-md-4 col-md-2">
+       <button type="button" class="btn btn-large btn-default m-2" data-toggle="modal" data-target="#addEvent">Add</button>
       </div>
 
      </div>
@@ -105,7 +107,6 @@
 
    <div class="row justify-content-center">
 
-
     <div class="col-md-5 px-0 diary-card">
 
      <div class="card-head">
@@ -116,31 +117,6 @@
       </div>
      </div>
 
-     <div class="row justify-content-center">
-      <div class="col-md-5 p-2 m-2 diary-center-border">
-       <span class="r-position" style="right: 10px"><img src="img/edit%202.png" /></span>
-       <p class="text-default mb-0"><img src="img/Calendar%20icon.png" /> 13 Nov 2018</p>
-       <p class="color-2">tunde has started saying 'Mama' and 'Dada'
-       </p>
-       <p class="small text-default">Language/Communication</p>
-       <p class="font-12 color-3">Makes a lot of different sounds like 
-        “mamamama” and “bababababa”</p>
-       <img class="img-fluid" src="img/baby_img.png" alt="baby boy" />
-      </div>
-
-      <div class="col-md-5 p-2 m-2 diary-center-border">
-       <span class="r-position" style="right: 10px"><img src="img/edit%202.png" /></span>
-       <p class="text-default mb-0"><img src="img/Calendar%20icon.png" /> 13 Nov 2018</p>
-       <p class="color-2">tunde has started saying 'Mama' and 'Dada'
-       </p>
-       <p class="small text-default">Language/Communication</p>
-       <p class="font-12 color-3">Makes a lot of different sounds like 
-        “mamamama” and “bababababa”</p>
-       <img class="img-fluid" src="img/baby_img.png" alt="baby boy" />
-      </div>
-     </div>
-
-
 
     </div>
 
@@ -148,46 +124,71 @@
 
   </div>
 
-  <!--Add member Modal -->
-  <div class="modal fade" id="addMoment" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <!--Add event Modal -->
+  <div class="modal fade" id="addEvent" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
    <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
      <div class="modal-header">
-      <h5 class="modal-title" id="exampleModalLongTitle">Add Moment</h5>
+      <h6 class="modal-title" id="exampleModalLongTitle">Add Event</h6>
       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
        <span aria-hidden="true">&times;</span>
       </button>
      </div>
+
      <div class="modal-body">
       <form>
-       <fieldset class="form-group mt-4">
-        <p class="small form-label text-center text-default mb-0" for="">Select the milestones achieved by your child
-         Age Range (in months)</p>
-        <div class="form-group range-slider-red">
-         <input type="text" id="range-slider-5" name="example_name" value="" />
-        </div>
-       </fieldset>
+
        <div class="form-row justify-content-center">
 
-        <div class="col-md-5 diary-center-border m-1">
-         <p class="color-2 font-12 p-2 mb-0">tunde has started saying 'Mama' and 'Dada'
-         </p>
-         <p class="small text-default p-2">Language/Communication</p>
+        <div class="col">
+         <label for="">Title</label>
+         <input type="text" class="form-control" placeholder="">
         </div>
 
-        <div class="col-md-5 diary-center-border m-1">
-         <p class="color-2 font-12 p-2 mb-0">tunde has started saying 'Mama' and 'Dada'
-         </p>
-         <p class="small text-default p-2">Language/Communication</p>
+       </div>
+
+       <div class="form-row justify-content-center my-3">
+
+        <div class="col">
+         <select class="form-control">
+          <option>Categories</option>
+         </select>
         </div>
 
+        <div class="col">
+         <input type="text" class="form-control" placeholder="Venue">
+        </div>
+
+       </div>
+
+       <div class="form-row justify-content-center my-3">
+
+        <div class="col">
+         <label for="">Event starts</label>
+         <input type="text" id="date-format" class="form-control floating-label" placeholder="Begin Date/Time">
+        </div>
+
+        <div class="col">
+         <label for="">Event ends</label>
+         <input type="text" id="date-format" class="form-control floating-label" placeholder="End Date Time">
+        </div>
+
+       </div>
+
+       <div class="form-row justify-content-center my-3">
+
+        <div class="col">
+         <label for="">Description</label>
+         <textarea class="form-control" id="" rows="2"></textarea>
+        </div>
 
        </div>
 
       </form>
+
      </div>
      <div class="modal-footer">
-      <button type="button" class="offset-md-2 btn btn-default px-4">Submit</button>  
+      <button type="button" class="offset-md-2 btn btn-default px-4">Create Event</button>  
      </div>
     </div>
    </div>
@@ -199,6 +200,55 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
   <script src="js/ion.rangeSlider.js"></script>
   <script src="js/init.js"></script>
+  <script type="text/javascript" src="http://momentjs.com/downloads/moment-with-locales.min.js"></script>
+  <script src="js/bootstrap-material-datetimepicker.js"></script>
+  <script type="text/javascript">
+   $(document).ready(function()
+                     {
+    $('#date').bootstrapMaterialDatePicker
+    ({
+     time: false,
+     clearButton: true
+    });
+
+    $('#time').bootstrapMaterialDatePicker
+    ({
+     date: false,
+     shortTime: false,
+     format: 'HH:mm'
+    });
+
+    $('#date-format').bootstrapMaterialDatePicker
+    ({
+     format: 'dddd DD MMMM YYYY - HH:mm'
+    });
+    $('#date-fr').bootstrapMaterialDatePicker
+    ({
+     format: 'DD/MM/YYYY HH:mm',
+     lang: 'fr',
+     weekStart: 1, 
+     cancelText : 'ANNULER',
+     nowButton : true,
+     switchOnClick : true
+    });
+
+    $('#date-end').bootstrapMaterialDatePicker
+    ({
+     weekStart: 0, format: 'DD/MM/YYYY HH:mm'
+    });
+    $('#date-start').bootstrapMaterialDatePicker
+    ({
+     weekStart: 0, format: 'DD/MM/YYYY HH:mm', shortTime : true
+    }).on('change', function(e, date)
+          {
+     $('#date-end').bootstrapMaterialDatePicker('setMinDate', date);
+    });
+
+    $('#min-date').bootstrapMaterialDatePicker({ format : 'DD/MM/YYYY HH:mm', minDate : new Date() });
+
+    $.material.init()
+   });
+  </script>
 
  </body>
 </html>
