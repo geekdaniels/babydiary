@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baby diary | SignIn</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/onboarding.css">
+  <link href="css/jquery.datepick.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+ </head>
+
+ <body class="signup-bg">
+  <div class="container" >
+   <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="#"><img src="img/logo-white.png" alt="Bbaydiary logo" /></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+     <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+     <ul class="navbar-nav ml-auto">
+      <li class="nav-item active px-md-4">
+       <a class="nav-link text-white" href="index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item px-md-4">
+       <a class="nav-link text-white" href="blog.html">Blog</a>
+      </li>
+      <li class="nav-item px-md-4">
+       <a class="nav-link text-white" href="faq.html">FAQ</a>
+      </li>
+
+      <li class="nav-item px-md-3">
+       <a class="nav-link text-white py-md-1" href="login.html" tabindex="-1" aria-disabled="true"><button class="btn btn-outline-white btn-sm my-2 my-sm-0 px-3 text-white" type="submit">sign in</button></a>
+      </li>
+      <li class="nav-item px-md-2 ">
+       <a class="nav-link py-md-1" href="signup.html" tabindex="-1" aria-disabled="true"><button class="btn btn-outline-white btn-sm my-2 my-sm-0 px-3 text-white" type="submit">sign up</button></a>
+      </li>
+     </ul>
+    </div>
+   </nav>
+  </div>
+
+  <!--   navigation ends-->
+
+  <div class="container mt-3" id="diary-app">
+   <div class="row justify-content-center">
+    <div class="col-md-3 border border-light log-box">
+     <span class="img-right"><img src="img/image-right.png" /></span>
+     <span class="img-left"><img src="img/image-left.png" /></span>
+     <form id="diaryform">
+
+      <!--      signup form ends here-->
+      <section class="active" id="personal">
+       <p class="text-center mt-5 mb-2" style="margin-top: 50px !important;">Register to create account <img src="img/happy.png" alt="happy smiley" /></p>
+
+
+       <div class="form-group my-2">
+        <label>First Name</label>
+        <input name="first_name" id="first_name" type="text" class="form-control input-lg" />
+        <span id="error_first_name" class="text-danger"></span>
+       </div>
+
+       <div class="form-group my-2">
+        <label>Last Name</label>
+        <input type="text" name="last_name" id="last_name" class="form-control input-lg" />
+        <span id="error_last_name" class="text-danger"></span>
+       </div>
+
+       <div class="form-group my-2">
+        <label>Email</label>
+        <input type="text" name="email" id="email" class="form-control input-lg" />
+        <span id="error_email" class="text-danger"></span>
+       </div>
+
+       <div class="form-group my-2" >
+        <label style="bottom: 42px" >Gender</label>
+        <select class="form-control" style="height: calc(2.25rem + 2px);">
+         <option>Male</option>
+         <option>Female</option>
+        </select>
+        <span id="error_gender" class="text-danger"></span>
+       </div>
+
+       <div class="form-group my-2">
+        <label>Create Four Digit PIN</label>
+        <input type="password" id="password" name="password" class="form-control input-lg" />
+        <span id="error_password" class="text-danger"></span>
+       </div>
+
+       <div class="form-group mt-2">
+        <label>Comfirm PIN</label>
+        <input type="password" class="form-control input-lg" />
+       </div>
+
+
+       <div class="col my-3">
+        <small class="text-center">By creating your Nurturey account you confirm that you
+         agree with Baby Diary’s Terms of Service.
+        </small>
+       </div>
+
+
+       <button class="btn btn-signup btn-block rounded-0" name="btn_login_details" id="btn_login_details" type="button">NEXT</button>
+
+
+       <div class="col my-3">
+        <p class="text-center">Already have an account?</p>
+       </div>
+
+       <div class="col mb-4">
+        <button  class="btn btn-signup btn-block rounded-0">SIGN IN</button>
+       </div>
+      </section>
+
+      <!--baby/pregnancy form ends here-->
+      <section class="none" id="status" style="margin-top: 80px !important;">
+
+       <div class="form-group my-3">
+        <label style="bottom: 132px">Expecting a baby/ Have a child?</label>
+        <div class="row">
+         <div class="col p-4">
+          <div id="child" class="text-center hover" data-status="child">
+           <span class="no-text-decoration" ><img src="img/baby%20boy.png" alt="child" class="mt-2" />
+            <p class="text-default text-center m-2">Child</p></span>
+          </div>
+         </div>
+         <div class="col p-4">
+          <div id="pregnant" class="text-center hover" data-status="pregnant">
+           <span class="no-text-decoration" >
+            <img src="img/pregnant.png" alt="pregnant" class="mt-2" />
+            <p class="text-default text-center m-2">Pregnant</p>
+           </span>
+          </div>
+         </div>
+        </div>
+       </div>
+
+       <div class="row">
+        <div class="col my-3 text-center">
+         <button id="status_back" type="button" class="btn btn-signup rounded-0">BACK</button>
+        </div>
+       </div>
+
+      </section>
+
+      <!--Gender form starts here-->
+      <section class="none" id="gender" style="margin-top: 80px !important;">
+       <div class="form-group my-1">
+        <label style="bottom: 124px">Gender of child</label>
+        <div class="row">
+         <div class="col p-4">
+          <div id="male" class="text-center hover" data-gender="male">
+           <span class="no-text-decoration" ><img src="img/masculine.png" alt="male" class="mt-2" />
+            <p class="text-default text-center m-2">Male</p></span>
+          </div>
+         </div>
+         <div class="col p-4">
+          <div id="female" class="text-center hover" data-gender="female">
+           <span class="no-text-decoration" >
+            <img src="img/femenine.png" alt="female" class="mt-2" />
+            <p class="text-default text-center m-2">Female</p>
+           </span>
+
+          </div>
+         </div>
+        </div>
+       </div>
+
+       <div class="form-group my-1">
+        <label>Child Name</label>
+        <input type="text" class="form-control input-lg" />
+       </div>
+
+       <div class="row">
+        <div class="col my-3 text-center">
+         <button type="button" id="gender_back" class="btn btn-signup rounded-0">BACK</button>
+        </div>
+        <div class="col my-3 text-center">
+         <button type="button" id="finish_child" class="btn btn-signup rounded-0">FINISH</button>
+        </div>
+       </div>
+
+
+      </section>
+
+      <!--day of delivery form ends here-->
+      <section class="none" id="delivery_date" style="margin-top: 80px !important;">
+       <div class="form-group my-3">
+        <label style="bottom: 100px">Expected Day of Delievery</label>
+        <div class="row">
+         <div class="col p-4">
+
+          <div class="radio">
+           <label> <input type="radio" name="optradio" checked> Expected Day of Delievery</label>
+          </div>
+          <div class="radio">
+           <label><input type="radio" name="optradio"> USE LAST PERIOD CYCLE</label>
+          </div>
+          <div class="input-group">
+           <input id="popupDatepicker" type="text" class="form-control docs-date" name="date" placeholder="Pick a date" style="height: 3rem">
+           <div class="input-group-append">
+            <button type="button" class="btn btn-outline-secondary docs-datepicker-trigger" disabled>
+             <i class="far fa-calendar-alt" aria-hidden="true"></i>
+            </button>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+
+
+       <div class="col mb-4">
+        <button type="button" id="finish_pregnant" class="btn btn-signup btn-block rounded-0">FINISH</button>
+       </div>
+
+      </section>
+
+      <!--LAST PERIOD CYCLE form ends here-->
+      <section class="none" id="period_cycle" style="margin-top: 80px !important;">
+
+       <div data-toggle="datepicker"></div>
+       <div class="form-group my-3">
+        <label style="bottom: 100px">LAST PERIOD CYCLE</label>
+        <div class="row">
+         <div class="col p-4">
+          <div class="input-group">
+           <input type="text" class="form-control" id="popupDatepicker" name="date" placeholder="Pick a date" style="height: 3rem">
+           <div class="input-group-append">
+            <button type="button" class="btn btn-outline-secondary docs-datepicker-trigger" disabled>
+             <i class="far fa-calendar-alt" aria-hidden="true"></i>
+            </button>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+
+       <p class="text-default text-center">OR</p>
+
+       <div class="col mb-4">
+        <button  class="btn btn-signup btn-block rounded-0">BACK</button>
+       </div>
+
+       <div class="col mb-4">
+        <button class="btn btn-signup btn-block rounded-0">FINISH</button>
+       </div>
+
+      </section>
+
+     </form>
+    </div>
+   </div>
+
+  </div>
+
+
+  <!--  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>-->
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+
+  <script src="js/jquery.plugin.js"></script>
+  <script src="js/jquery.datepick.js"></script>
+
+  <script>
+
+   $(function() {
+    $('#popupDatepicker').datepick();
+   });
+
+   function validate(){
+    var error_first_name = '';
+    var error_last_name = '';
+    var error_email = '';    
+    var error = '';
+    var error_password = '';
+    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+    if($.trim($('#email').val()).length == 0)
+    {
+     error = error_email = 'Email is required';
+     $('#error_email').text(error_email);
+     $('#email').addClass('has-error');
+    }
+    else
+    {
+     if (!filter.test($('#email').val()))
+     {
+      error = error_email = 'Invalid Email';
+      $('#error_email').text(error_email);
+      $('#email').addClass('has-error');
+     }
+     else
+     {
+      error = error_email = '';
+      $('#error_email').text(error_email);
+      $('#email').removeClass('has-error');
+     }
+    }
+
+    if($.trim($('#password').val()).length == 0)
+    {
+     error = error_password = 'Password is required';
+     $('#error_password').text(error_password);
+     $('#password').addClass('has-error');
+    }
+    else
+    {
+     error = error_password = '';
+     $('#error_password').text(error_password);
+     $('#password').removeClass('has-error');
+    }
+
+    if($.trim($('#first_name').val()).length == 0)
+    {
+     error = error_first_name = 'First Name is required';
+     $('#error_first_name').text(error_first_name);
+     $('#first_name').addClass('has-error');
+    }
+    else
+    {
+     error = error_first_name = '';
+     $('#error_first_name').text(error_first_name);
+     $('#first_name').removeClass('has-error');
+    }
+
+    if($.trim($('#last_name').val()).length == 0)
+    {
+     error = error_last_name = 'Last Name is required';
+     $('#error_last_name').text(error_last_name);
+     $('#last_name').addClass('has-error');
+    }
+    else
+    {
+     error = error_last_name = '';
+     $('#error_last_name').text(error_last_name);
+     $('#last_name').removeClass('has-error');
+
+    }
+
+    return error;
+   }
+
+   $(document).ready(function(){
+
+    $('#btn_login_details').click(function(){
+
+     var result = validate();  
+
+     if(result == ''){
+      $('#personal').hide();
+      $('#status').show();
+     } 
+
+    });
+
+   });
+
+   $('#child').click(function(){
+    $('#status').hide();
+    $('#gender').show();
+
+    console.log($('#child').data('status'));
+   });
+
+   $('#pregnant').click(function(){
+    $('#status').hide();
+    $('#delivery_date').show();
+
+    console.log($('#pregnant').data('status'));
+   });
+
+   $('#male').click(function(){
+    if($('#female').hasClass('selected')){
+     $('#female').removeClass('selected');
+    }
+    $('#male').addClass('selected');
+   });
+
+   $('#female').click(function(){
+    if($('#male').hasClass('selected')){
+     $('#male').removeClass('selected');
+    }
+
+    $('#female').addClass('selected');
+
+   });
+
+   $('#status_back').click(function(){
+    $('#personal').show();
+    $('#status').hide();
+   })
+
+   $('#gender_back').click(function(){
+    $('#status').show();
+    $('#gender').hide();
+   });
+
+
+   $('#finish_child').click(function(){
+    //    $("#diaryform").submit();
+
+    $('#diaryform input').each(function(index) {
+     console.log($(this).attr('name') + " = " + $(this).val());
+    });
+
+    if($('.selected[data-gender]')){
+     console.log($('.selected').data('gender'));
+    }
+
+
+   })
+
+   $('#finish_pregnant').click(function(){
+    //    $("#diaryform").submit();
+
+    $('#diaryform input').each(function(index) {
+     console.log($(this).attr('name') + " = " + $(this).val());
+    });
+
+
+   })
+
+
+
+  </script>
+
+ </body>
+</html>

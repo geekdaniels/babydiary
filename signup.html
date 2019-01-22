@@ -32,7 +32,7 @@
       </li>
 
       <li class="nav-item px-md-3">
-       <a class="nav-link text-white py-md-1" href="#" tabindex="-1" aria-disabled="true"><button class="btn btn-outline-white btn-sm my-2 my-sm-0 px-3 text-white" type="submit">sign in</button></a>
+       <a class="nav-link text-white py-md-1" href="login.html" tabindex="-1" aria-disabled="true"><button class="btn btn-outline-white btn-sm my-2 my-sm-0 px-3 text-white" type="submit">sign in</button></a>
       </li>
       <li class="nav-item px-md-2 ">
        <a class="nav-link py-md-1" href="signup.html" tabindex="-1" aria-disabled="true"><button class="btn btn-outline-white btn-sm my-2 my-sm-0 px-3 text-white" type="submit">sign up</button></a>
@@ -54,7 +54,7 @@
       <!--      signup form ends here-->
 
       <section v-if="step === 1">
-       <p class="text-center mt-5 mb-4" style="margin-top: 50px !important;">Register to create account <img src="img/happy.png" alt="happy smiley" /></p>
+       <p class="text-center mt-5 mb-2" style="margin-top: 50px !important;">Register to create account <img src="img/happy.png" alt="happy smiley" /></p>
 
 
        <div class="form-group my-2">
@@ -62,25 +62,25 @@
         <input v-model="registration_data.firstname" type="text" class="form-control input-lg" />
        </div>
 
-       <div class="form-group my-4">
+       <div class="form-group my-2">
         <label>Last Name</label>
         <input v-model="registration_data.lastname" type="text" class="form-control input-lg" />
        </div>
 
-       <div class="form-group my-4" >
+       <div class="form-group my-2" >
         <label style="bottom: 42px" >Gender</label>
-        <select class="form-control" style="height: calc(2.25rem + 2px);">
+        <select v-model="registration_data.parentgender" class="form-control" style="height: calc(2.25rem + 2px);">
          <option>Male</option>
          <option>Female</option>
         </select>
        </div>
 
-       <div class="form-group my-4">
+       <div class="form-group my-2">
         <label>Create Four Digit PIN</label>
         <input v-model="registration_data.pin" type="password" class="form-control input-lg" />
        </div>
 
-       <div class="form-group mt-4">
+       <div class="form-group mt-2">
         <label>Comfirm PIN</label>
         <input type="password" class="form-control input-lg" />
        </div>
@@ -112,18 +112,17 @@
         <label style="bottom: 132px">Expecting a baby/ Have a child?</label>
         <div class="row">
          <div class="col p-4">
-          <div class="text-center">
+          <div class="text-center hover">
            <a @click.prevent="child" href="" class="no-text-decoration" ><img src="img/baby%20boy.png" alt="child" />
             <p class="text-default text-center m-2">Child</p></a>
           </div>
          </div>
          <div class="col p-4">
-          <div class="text-center">
+          <div class="text-center hover">
            <a @click.prevent="pregnant" href="" class="no-text-decoration" >
             <img src="img/pregnant.png" alt="pregnant" />
             <p class="text-default text-center m-2">Pregnant</p>
            </a>
-
           </div>
          </div>
         </div>
@@ -133,12 +132,14 @@
         <div class="col my-3 text-center">
          <button @click.prevent="back" class="btn btn-signup rounded-0">BACK</button>
         </div>
-        <div v-if="registration_data.status" class="col my-3 text-center">
-         <button @click.prevent="stage" class="btn btn-signup rounded-0">NEXT</button>
-        </div>
-        <div v-if="registration_data.child" class="col my-3 text-center">
-         <button @click.prevent="next" class="btn btn-signup rounded-0">NEXT</button>
-        </div>
+        <!--
+<div v-if="registration_data.status" class="col my-3 text-center">
+<button @click.prevent="stage" class="btn btn-signup rounded-0">NEXT</button>
+</div>
+<div v-if="registration_data.child" class="col my-3 text-center">
+<button @click.prevent="next" class="btn btn-signup rounded-0">NEXT</button>
+</div>
+-->
        </div>
 
       </section>
@@ -149,14 +150,14 @@
         <label style="bottom: 124px">Gender of child</label>
         <div class="row">
          <div class="col p-4">
-          <div class="text-center">
-           <a href="" class="no-text-decoration" ><img src="img/masculine.png" alt="male" />
+          <div class="text-center hover">
+           <a @click.prevent="male" href="" class="no-text-decoration" ><img src="img/masculine.png" alt="male" />
             <p class="text-default text-center m-2">Male</p></a>
           </div>
          </div>
          <div class="col p-4">
-          <div class="text-center">
-           <a href="" class="no-text-decoration" >
+          <div class="text-center hover">
+           <a @click.prevent="female" href="" class="no-text-decoration" >
             <img src="img/femenine.png" alt="female" />
             <p class="text-default text-center m-2">Female</p>
            </a>
@@ -176,7 +177,7 @@
          <button @click.prevent="back" class="btn btn-signup rounded-0">BACK</button>
         </div>
         <div class="col my-3 text-center">
-         <button @click.prevent="submit" class="btn btn-signup rounded-0">FINISH</button>
+         <button @click.prevent="finish" class="btn btn-signup rounded-0">FINISH</button>
         </div>
        </div>
 
@@ -281,11 +282,12 @@
       registration_data : {
        firstname : null,
        lastname : null,
-       gender : null,
+       parentgender : null,
        pin : null,
        child : null,
        status : null,
-       babygender : null
+       babygender : null,
+       childname : null
       }
      }
     },
@@ -306,10 +308,22 @@
       this.registration_data.status = null;
       let details = JSON.stringify(this.registration_data);
       console.log(details);
+      this.step++;
      },
      pregnant : function(){
       this.registration_data.status = 'pregnant';
       this.registration_data.child = null;
+      let details = JSON.stringify(this.registration_data);
+      console.log(details);
+      this.step = 4;
+     },
+     male : function(){
+      this.registration_data.babygender = 'male';
+      let details = JSON.stringify(this.registration_data);
+      console.log(details);
+     },
+     female : function(){
+      this.registration_data.babygender = 'female';
       let details = JSON.stringify(this.registration_data);
       console.log(details);
      },
