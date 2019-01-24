@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <title>Slidebars | Adchsm</title>
+  <meta name="description" content="Slidebars is a jQuery framework for off-canvas menus and sidebars.">
+
+  <meta name="author" content="Adam Charles Smith">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="/slidebars/bower_components/normalize-css/normalize.css">
+  <link rel="stylesheet" href="/slidebars/bower_components/manhattan-grid/dist/manhattan.css">
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,600,300italic%7CLato:300,100" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/slidebars/bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/slidebars/bower_components/Slidebars/dist/slidebars.min.css">
+  <link rel="stylesheet" href="/slidebars/css/style.css">
+  <script>
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                           })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+   ga('create', 'UA-42666109-2', 'auto');
+   ga('send', 'pageview');
+
+  </script>	</head>
+
+ <body>
+  <div canvas="container">
+   <!-- Banner -->
+   <div id="banner" mhtn="container edge">
+    <img src="/slidebars/images/banner.jpg" alt="Slidebars">
+   </div>
+   <!-- Content -->
+   <div mhtn="container">
+    <div mhtn="row">
+     <div mhtn="col xs-100 md-66">
+      <div id="content">
+       <h1>Slidebars is a jQuery framework for creating app-style off-canvas menus and sidebars.</h1>
+
+       <p>Born in 2014 from a reoccurring need to create mobile menus in responsive design, Slidebars has quickly become the number one choice for developers. With the release of version 2, Slidebars packs more functionality than ever before with an even lighter footprint.</p>
+
+       <p>Weighing in at only 1.69kb gzipped, the new Slidebars features clean and discreet markup, permits an unlimited number of off-canvas instances on any side and is equipped with a full API, callbacks and events for ultimate control.</p>
+
+       <p><a href="/slidebars/downloads/" class="button red expand-on-mobile"><i class="fa fa-cloud-download"></i> Get Slidebars</a> <span class="button purple expand-on-mobile js-toggle-demos-menu"><i class="fa fa-eye"></i> View Demos</span> <span class="button blue expand-on-mobile js-toggle-help-menu"><i class="fa fa-life-ring"></i> Visit Help Center</span></p>
+      </div>
+     </div>
+
+     <div mhtn="col xs-100 md-33">
+      <div id="sidebar">
+       <div class="no-margin" mhtn="row">
+        <div mhtn="col xs-100 sm-50 md-100">
+         <div class="ad">
+          <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+          <ins class="adsbygoogle responsive-ad-size" style="display:inline-block" data-ad-client="ca-pub-7022862816626393" data-ad-slot="3010692269"></ins>
+
+          <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+         </div>
+        </div>
+
+        <div mhtn="col xs-100 sm-50 md-100">
+         <div class="donate">
+          <p class="small">Slidebars is completely free for use on any project. I spend a lot of time developing and suppporting it, if you find Slidebars useful, are using it commercially or making money from a project using Slidebars, please consider <a class="ga-donate-text" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6R9937TXX68J4" target="_blank">donating</a>, I'd really appreciate it.</p>
+
+          <p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6R9937TXX68J4" target="_blank" class="button paypal expand-on-mobile ga-donate-button"><i class="fa fa-paypal"></i> Donate with PayPal</a></p>
+         </div>
+        </div>
+       </div>
+      </div>					</div>
+    </div>
+   </div><!-- /container -->
+
+   <footer mhtn="container">
+    <div mhtn="row">
+     <div mhtn="col xs-100">
+      <small class="black-secondary">Slidebars &copy; 2014 - 2019 <a href="http://www.adchsm.com/">Adam Charles Smith</a> | Browser testing provided by <a target="_blank" href="http://www.browserstack.com/"><img id="browserstack" src="/slidebars/images/browserstack-logo.png" alt="BrowserStack" width="100"></a></small>
+     </div>
+    </div>
+   </footer>		</div><!-- /canvas -->
+
+  <nav canvas="">
+   <div mhtn="container">
+    <div mhtn="row">
+     <div mhtn="col xs-100">
+      <div class="float-left">
+       <span class="button js-toggle-main-menu"><i class="fa fa-bars"></i> <span class="text">Menu</span></span>
+      </div>
+
+      <div class="float-right">
+       <span class="button js-toggle-help-menu "><i class="fa fa-life-ring"></i> <span class="text">Help Center</span></span>
+      </div>
+
+      <a href="/slidebars/"><img id="logo" src="/slidebars/images/slidebars-logo.png" alt="Slidebars"></a>
+     </div>
+    </div>
+   </div>
+  </nav>
+
+  <div off-canvas="main-menu left shift">
+   <img id="logo-menu" src="/slidebars/images/slidebars-logo-white.png" alt="Slidebars">
+
+   <ul class="menu small">
+    <li><a href="/slidebars/"><span class="fa fa-home"></span> Home</a></li>
+    <li><a href="/slidebars/features/"><span class="fa fa-check-circle"></span> Features</a></li>
+    <li><a href="/slidebars/downloads/"><span class="fa fa-cloud-download"></span> Downloads</a></li>
+    <li><a href="#" class="js-toggle-demos-menu"><span class="fa fa-eye"></span> Demos</a></li>
+    <li><a href="#" class="js-toggle-help-menu"><span class="fa fa-life-ring"></span> Help Center</a></li>
+    <li><a href="/slidebars/compatibility/"><span class="fa fa-info-circle"></span> Compatibility</a></li>
+    <li><a href="https://github.com/adchsm/Slidebars" class="ga-external-github"><span class="fa fa-github"></span> Slidebars on GitHub</a></li>
+    <li><a href="#" class="js-toggle-author-menu"><span class="fa fa-user"></span> About the Author</a></li>
+    <li><a href="#" class="js-close-any"><span class="fa fa-times-circle"></span> Close</a></li>
+   </ul>
+  </div>
+
+  <div off-canvas="author-menu left shift">
+   <div class="padded-box">
+    <img id="profile" src="/slidebars/images/me.jpg" alt="Adchsm">
+
+    <h3>Hi, I'm Adam.</h3>
+
+    <p class="small" style="margin-bottom: 0px;">I'm a freelance website designer and front-end developer in BCN.</p>
+   </div>
+
+   <ul class="menu small">
+    <li><a href="http://www.adchsm.com/"><span class="fa fa-desktop"></span> Adchsm.com</a></li>
+    <li><a href="https://twitter.com/adchsm"><span class="fa fa-twitter"></span> Follow on Twitter</a></li>
+    <li><a href="https://es.linkedin.com/in/adchsm"><span class="fa fa-linkedin"></span> Connect on LinkedIn</a></li>
+    <li><a href="https://github.com/adchsm"><span class="fa fa-github"></span> Follow on GitHub</a></li>
+    <li><a href="mailto:&#097;&#100;&#097;&#109;&#064;&#097;&#100;&#099;&#104;&#115;&#109;&#046;&#099;&#111;&#109;"><span class="fa fa-send"></span> Email Me</a></li>
+    <li><a href="http://eepurl.com/bkIArj"><span class="fa fa-envelope"></span> Mailing List</a></li>
+    <li><a href="#" class="js-toggle-main-menu"><span class="fa fa-arrow-circle-left"></span> Back</a></li>
+    <li><a href="#" class="js-close-any"><span class="fa fa-times-circle"></span> Close</a></li>
+   </ul>
+  </div>
+
+  <div off-canvas="help-menu right shift">
+   <ul class="menu small">
+    <li><a href="/slidebars/help/request-support/"><span class="fa fa-send"></span> Request Support</a></li>
+    <li><a href="/slidebars/help/usage/"><span class="fa fa-list"></span> Usage</a></li>
+    <li><a href="/slidebars/help/api/"><span class="fa fa-cog"></span> API</a></li>
+    <li><a href="/slidebars/help/advanced-usage/"><span class="fa fa-graduation-cap"></span> Advanced Usage</a></li>
+    <li><a href="/slidebars/help/customizing-slidebars/"><span class="fa fa-paint-brush"></span> Customizing Slidebars</a></li>
+    <li><a href="/slidebars/help/callbacks/"><span class="fa fa-phone"></span> Callbacks</a></li>
+    <li><a href="/slidebars/help/events/"><span class="fa fa-bullhorn"></span> Events</a></li>
+    <li><a href="/slidebars/help/issues/"><span class="fa fa-exclamation-circle"></span> Issues</a></li>
+    <li><a href="#" class="js-close-any"><span class="fa fa-times-circle"></span> Close</a></li>
+   </ul>
+  </div>
+
+  <div class="demos-menu" off-canvas="demos-menu bottom push">
+   <div class="demo-block">
+    <a href="/slidebars/demos/left-and-right/">
+     <div class="demo-icon">
+      <span class="fa fa-arrows-h"></span>
+     </div>
+
+     <p class="demo-text">Left and Right</p>
+    </a>
+   </div>
+
+   <div class="demo-block">
+    <a href="/slidebars/demos/top-and-bottom/">
+     <div class="demo-icon">
+      <span class="fa fa-arrows-v"></span>
+     </div>
+
+     <p class="demo-text">Top and Bottom</p>
+    </a>
+   </div>
+
+   <div class="demo-block">
+    <a href="/slidebars/demos/multiple-same-side/">
+     <div class="demo-icon">
+      <span class="fa fa-long-arrow-left"></span>
+     </div>
+
+     <p class="demo-text">Multiple Same Side</p>
+    </a>
+   </div>
+
+   <div class="demo-block">
+    <a href="/slidebars/demos/animation-styles/">
+     <div class="demo-icon">
+      <span class="fa fa-magic"></span>
+     </div>
+
+     <p class="demo-text">Animation Styles</p>
+    </a>
+   </div>
+
+   <div class="demo-block">
+    <a href="/slidebars/demos/mobile-only/">
+     <div class="demo-icon">
+      <span class="fa fa-mobile"></span>
+     </div>
+
+     <p class="demo-text">Mobile Only</p>
+    </a>
+   </div>
+
+   <div class="demo-block">
+    <a href="/slidebars/demos/custom-widths-and-heights/">
+     <div class="demo-icon">
+      <span class="fa fa-arrows"></span>
+     </div>
+
+     <p class="demo-text">Custom Widths and Heights</p>
+    </a>
+   </div>
+
+   <div class="demo-block">
+    <a href="/slidebars/demos/custom-transition-durations/">
+     <div class="demo-icon">
+      <span class="fa fa-clock-o"></span>
+     </div>
+
+     <p class="demo-text">Custom Transition Durations</p>
+    </a>
+   </div>
+
+   <div class="demo-block">
+    <a href="/slidebars/demos/callbacks/">
+     <div class="demo-icon">
+      <span class="fa fa-phone"></span>
+     </div>
+
+     <p class="demo-text">Callbacks</p>
+    </a>
+   </div>
+
+   <div class="demo-block">
+    <a href="/slidebars/demos/events/">
+     <div class="demo-icon">
+      <span class="fa fa-bullhorn"></span>
+     </div>
+
+     <p class="demo-text">Events</p>
+    </a>
+   </div>
+  </div><script src="/slidebars/bower_components/fastclick/lib/fastclick.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="/slidebars/bower_components/Slidebars/dist/slidebars.min.js"></script>
+  <script src="/slidebars/js/scripts.js"></script>	</body>
+</html>

@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Baby diary | Feeds</title>
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css"> 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/dashboard.css">
-  <!--  <link rel="stylesheet" href="css/slidebars.min.css">-->
-  <!--  <link rel="stylesheet" href="css/style.css">-->
-
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/demo.css">
  </head>
 
  <body class="">
@@ -18,13 +18,8 @@
    <div class="container" >
     <nav class="navbar navbar-expand-lg navbar-light ">
      <a class="navbar-brand" href="#"><img src="img/Baby's%20Dairy%20logo%20white.png" alt="Bbaydiary logo" width="45px"/></a>
-     <!--
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-<span class="navbar-toggler-icon"></span>
-</button>
--->
 
-     <button class="navbar-toggler js-toggle-main-menu" type="button" >
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
      </button>
 
@@ -63,20 +58,85 @@
    </div>
   </div>
 
-  <!--   navigation ends-->
+  <!--  mobile navigation-->
 
   <div class="container-fluid top">
 
   </div>
 
+  <div class="cd-tabs js-cd-tabs">
+   <nav>
+    <ul class="cd-tabs__navigation js-cd-navigation">
+     <li><a data-content="inbox" class="cd-selected" href="#0">Feeds</a></li>
+     <li><a data-content="moment" href="#0">Moments</a></li>
+     <li><a data-content="docs" href="#0">Documents</a></li>
+     <li><a data-content="measurement" href="#0">Measurement</a></li>
+     <li><a data-content="chart" href="#0">Chart</a></li>
+
+     <li><a data-content="immunize" href="#0">Immunization</a></li>
+    </ul>  
+    <!--    cd-tabs__navigation -->
+   </nav>
+
+  </div>
+
+  <!--   navigation ends-->
+
+
   <div class="container section">
 
    <div class="row">
-    <div class="col-md-3 diary-card">
-     <p class="text-default font-weight-bold py-3 mb-0"><img src="img/Family.png" alt="family" /> MY FAMILY</p>
+    <div class="col-md-3 diary-card p-0" style="max-width: 236px !important; position: absolute; left: 40px; margin-right: 60px;">
+
+     <section style="position: relative">
+      <p class="text-default font-weight-light p-3 mb-0"><img src="img/Family.png" alt="family" /> APPLESEED FAMILY</p>
+
+      <ul class="list-unstyled font-12" >
+
+       <li class="" >
+        <a href="#videos" data-toggle="collapse" aria-expanded="false" class="dropdown-side collapsed text-dark p-2 block" style="background: #C4C4C4;"> <span><img src="img/baby%20boy-dark.png" class="mb-1 mr-2" /></span>  Tunde</a>
+
+        <ul class="list-unstyled collapse show side" id="videos" style="">
+         <li class="py-2 px-3">
+          <a class="text-dark" href="videos.html"><span><img src="img/dashboard.png" class="mb-1 mr-2" /></span>  Dashboard</a>
+         </li>
+
+         <li class="py-2 px-3">
+          <a class="text-dark" href="videos.html"><span><img src="img/syringe.png" class="mb-1 mr-2" /></span>  Immunization</a>
+         </li>
+
+         <li class="py-2 px-3">
+          <a class="text-dark" href="videos.html"><span><img src="img/moment_icon.png" class="mb-1 mr-2" /></span>  Moments</a>
+         </li>
+
+         <li class="py-2 px-3">
+          <a class="text-dark" href="videos.html"><span><img src="img/Calendar%20icon.png" class="mb-1 mr-2" /></span>  Calendar</a>
+         </li>
+
+         <li class="py-2 px-3">
+          <a class="text-dark" href="videos.html"><span><img src="img/nutrition.png" class="mb-1 mr-2" /></span>  Nutrition</a>
+         </li>
+
+         <li class="py-2 px-3">
+          <a class="text-dark" href="videos.html"><span><img src="img/rule.png" class="mb-1 mr-2" /></span>  Measurement</a>
+         </li>
+
+         <li class="py-2 px-3">
+          <a class="text-dark" href="videos.html"><span><img src="img/statistics.png" class="mb-1 mr-2" /></span>  Growth Chart</a>
+         </li>
+
+         <li class="py-2 px-3">
+          <a class="text-dark" href="videos.html"><span><img src="img/doc.png" class="mb-1 mr-2" /></span>  Documents</a>
+         </li>
+        </ul>
+       </li>
+      </ul>
+
+     </section>
+
     </div>
 
-    <div class="col-md-5 px-0 diary-card">
+    <div class="col-md-5 px-0 diary-card" style="left: 315px">
      <div class="row">
       <div class="col-md-5">
        <p class="p-3 mb-0 text-default"><img src="img/dashboard.png" alt="family" /> DASHBOARD</p>
@@ -89,8 +149,9 @@
 
     </div>
 
-    <div class="col-md-3 diary-card">
-
+    <div class="col-md-3 diary-card" style="position: absolute; right: 0px">
+     <h6 class="px-2 pt-3">Baby Tips</h6>
+     <p class="small p-2">Exercise is great for your body as well as your mind, and is proven to reduce stress. Sharing nature with your baby will keep both healthier and happier. Try and schedule daily walks and develop a routine which works for you, such as yoga or a home-workout</p>
     </div>
    </div>
 
@@ -104,7 +165,7 @@
        <div class="col-md-10">
         <p class="pt-3 pl-2 pb-0 mb-0 text-default"><img style="margin-bottom: 5px" src="img/Calendar%20icon.png" width="20px" /> Post from Moments</p>
         <small class="ml-4 pl-1 text-default">13 Nov 2018</small>
-        <p class="ml-4 px-1 my-0 font-weight-bold text-default">
+        <p class="ml-4 px-1 my-0 text-dark">
          Tunde has started saying 'Mama' and 'Dada'
         </p>
        </div>
@@ -191,6 +252,7 @@
      </div>
      <div class="modal-body">
       <form>
+
        <div class="form-row">
         <div class="col">
          <textarea class="form-control" placeholder="Description">
@@ -209,120 +271,12 @@
    </div>
   </div>
 
-  <div off-canvas="main-menu left overlay">
-   <img id="logo-menu" src="img/Baby's%20Dairy%20logo%20white.png" alt="Babydiary">
-
-   <ul class="menu small">
-    <li><a href="/slidebars/"><span class="fa fa-home"></span> Home</a></li>
-    <li><a href="/slidebars/features/"><span class="fa fa-check-circle"></span> Features</a></li>
-    <li><a href="/slidebars/downloads/"><span class="fa fa-cloud-download"></span> Downloads</a></li>
-    <li><a href="#" class="js-toggle-demos-menu"><span class="fa fa-eye"></span> Demos</a></li>
-    <li><a href="#" class="js-toggle-help-menu"><span class="fa fa-life-ring"></span> Help Center</a></li>
-    <li><a href="/slidebars/compatibility/"><span class="fa fa-info-circle"></span> Compatibility</a></li>
-    <li><a href="https://github.com/adchsm/Slidebars" class="ga-external-github"><span class="fa fa-github"></span> Slidebars on GitHub</a></li>
-    <li><a href="#" class="js-toggle-author-menu"><span class="fa fa-user"></span> About the Author</a></li>
-    <li><a href="#" class="js-close-any"><span class="fa fa-times-circle"></span> Close</a></li>
-   </ul>
-  </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
-  <script src="js/fastclick.js" ></script>
-  <script src="js/slidebars.min.js"></script>
-  <script>
-   /**
- * FastClick
- */
-
-   //   if ( 'addEventListener' in document ) {
-   //    document.addEventListener('DOMContentLoaded', function () {
-   //     FastClick.attach( document.body );
-   //    }, false );
-   //   }
-
-   ( function ( $ ) {
-    $( function () {
-     /**
-         * Slidebars Controller
-         */
-
-     // Init
-     var controller = new slidebars();
-     controller.init();
 
 
-     // Add close class to canvas container when Slidebar is opened
-     $( controller.events ).on( 'opening', function ( event ) {
-      $( '[canvas]' ).addClass( 'js-close-any' );
-     } );
-
-     // Add close class to canvas container when Slidebar is opened
-     $( controller.events ).on( 'closing', function ( event ) {
-      $( '[canvas]' ).removeClass( 'js-close-any' );
-     } );
-
-     // Left demo
-     //     $( '.js-toggle-main-menu' ).on( 'click', function ( event ) {
-     //      event.preventDefault();
-     //      event.stopPropagation();
-     //      controller.open( 'main-menu' );
-     //     } );
-
-     // Overlay demo
-     $( '.js-toggle-main-menu' ).on( 'click', function ( event ) {
-      event.preventDefault();
-      event.stopPropagation();
-      controller.open( 'main-menu' );
-     } );
-
-     $( '.js-close-any' ).on( 'click', function ( event ) {
-      event.preventDefault();
-      event.stopPropagation();
-      controller.close( 'main-menu' );
-     } );
-
-     // Mobile only
-     var windowWidth,
-         mobileOnly = function () {
-          windowWidth = $( window ).width();
-
-          if ( windowWidth > 600 ) {
-           controller.close( 'main-menu' );
-          }
-         };
-
-     mobileOnly();
-     $( window ).on( 'resize', mobileOnly );
-
-     $( '.js-open-demo-mobile-only' ).on( 'click', function ( event ) {
-      event.preventDefault();
-      event.stopPropagation();
-
-      if ( windowWidth < 601 ) {
-       controller.open( 'demo-mobile-only' );
-      }
-     } );
-
-     $( '.js-toggle-demo-mobile-only' ).on( 'click', function ( event ) {
-      event.preventDefault();
-      event.stopPropagation();
-
-      if ( windowWidth < 601 ) {
-       controller.toggle( 'demo-mobile-only' );
-      }
-     } );
-
-     $( '.js-close-demo-mobile-only' ).on( 'click', function ( event ) {
-      event.preventDefault();
-      event.stopPropagation();
-      controller.close( 'demo-mobile-only' );
-     } );
-
-
-    } );
-   } ) ( jQuery );
-  </script>
 
  </body>
 </html>
