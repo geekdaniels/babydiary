@@ -19,7 +19,7 @@ Responsive Tabbed Navigation - by CodyHouse.co
  position: relative;
  /* width: 90%;*/
  max-width: 960px;
- margin: 2em auto;
+/* margin: 2em auto;*/
 }
 
 @supports (background: linear-gradient(to left, #000, #000)) or (background: -webkit-linear-gradient(to left, #000, #000)) {
@@ -114,15 +114,15 @@ Responsive Tabbed Navigation - by CodyHouse.co
 }
 
 .cd-tabs__navigation a:hover {
- color: #29324e;
+ color: #EB62A3;
  background-color: rgba(233, 230, 202, 0.3);
 }
 
 .cd-tabs__navigation a.cd-selected {
- background-color: #ffffff !important;
- -webkit-box-shadow: inset 0 2px 0 #f05451;
- box-shadow: inset 0 2px 0 #f05451;
- color: #29324e;
+     background-color: #fff !important;
+    -webkit-box-shadow: inset 0 2px 0 #000;
+    box-shadow: inset 0 2px 0 #000;
+    color: #EB62A3;
 }
 
 .cd-tabs__navigation a::before {

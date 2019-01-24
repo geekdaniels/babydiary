@@ -16,7 +16,7 @@
 
   <div class="container-fliud diary-default-bg">
    <div class="container" >
-    <nav class="navbar navbar-expand-lg navbar-light ">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
      <a class="navbar-brand" href="#"><img src="img/Baby's%20Dairy%20logo%20white.png" alt="Bbaydiary logo" width="45px"/></a>
 
      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -85,8 +85,9 @@
 
   <div class="container section">
 
-   <div class="row">
-    <div class="col-md-3 diary-card p-0" style="max-width: 236px !important; position: absolute; left: 40px; margin-right: 60px;">
+   <div class="row ipad-none">
+
+    <div class="col-md-3 diary-card p-0 no-mobile" style="max-width: 236px !important; position: absolute; left: 40px; margin-right: 60px;">
 
      <section style="position: relative">
       <p class="text-default font-weight-light p-3 mb-0"><img src="img/Family.png" alt="family" /> APPLESEED FAMILY</p>
@@ -136,9 +137,9 @@
 
     </div>
 
-    <div class="col-md-5 px-0 diary-card" style="left: 315px">
+    <div class="col-md-5 px-0 diary-card left-0" style="left: 315px">
      <div class="row">
-      <div class="col-md-5">
+      <div class="col-md-5 d-none d-sm-block">
        <p class="p-3 mb-0 text-default"><img src="img/dashboard.png" alt="family" /> DASHBOARD</p>
       </div>
 
@@ -149,7 +150,7 @@
 
     </div>
 
-    <div class="col-md-3 diary-card" style="position: absolute; right: 0px">
+    <div class="col-md-3 diary-card no-mobile" style="position: absolute; right: 0px">
      <h6 class="px-2 pt-3">Baby Tips</h6>
      <p class="small p-2">Exercise is great for your body as well as your mind, and is proven to reduce stress. Sharing nature with your baby will keep both healthier and happier. Try and schedule daily walks and develop a routine which works for you, such as yoga or a home-workout</p>
     </div>
@@ -159,7 +160,7 @@
    <div class="row justify-content-center">
 
 
-    <div class="col-md-5 px-0 diary-card">
+    <div class="col-md-5 px-0 diary-card ipad">
      <div class="">
       <div class="row">
        <div class="col-md-10">
@@ -200,30 +201,31 @@
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation minim veniam, ercitation..</p>
     </div>
 
-    <div class="col-md-2 font-12">
+    <div class="col-3 col-md-2 font-12 pl-0 pl-md-5">
      <h6>About</h6>
      <ul class="list-unstyled">
-      <li><a class="text-dark" href="">Facebook</a></li>
-      <li><a class="text-dark" href="">Youtube</a></li>
-      <li><a class="text-dark" href="">Linkedin</a></li>
+      <li class="py-1"><a class="text-dark" href="">Facebook</a></li>
+      <li class="py-1"><a class="text-dark" href="">Youtube</a></li>
+      <li class="py-1"><a class="text-dark" href="">Linkedin</a></li>
      </ul>
     </div>
 
 
 
-    <div class="col-md-2 font-12">
+    <div class="col-3 col-md-2 font-12">
      <h6>Social</h6>
      <ul class="list-unstyled">
-      <li><a class="text-dark" href="">Facebook</a></li>
-      <li><a class="text-dark" href="">Youtube</a></li>
-      <li><a class="text-dark" href="">Linkedin</a></li>
+      <li class="py-1"><a class="text-dark" href="">Facebook</a></li>
+      <li class="py-1"><a class="text-dark" href="">Youtube</a></li>
+      <li class="py-1"><a class="text-dark" href="">Linkedin</a></li>
      </ul>
     </div>
 
-    <div class="col-md-2">
+    <div class="col-3 col-md-2">
+     <h6>Downloads</h6>
      <ul class="list-unstyled">
-      <li><a href="#"><img src="img/google-app.png" alt="baby-diary-app-download" /></a></li>
-      <li><a href="#"><img src="img/iphone-app.png" alt="baby-diary-app-download" /></a></li>
+      <li class="py-1"><a href="#"><img class="img-fluid" src="img/google-app.png" alt="baby-diary-app-download" /></a></li>
+      <li class="py-1"><a href="#"><img class="img-fluid" src="img/iphone-app.png" alt="baby-diary-app-download" /></a></li>
      </ul>
 
     </div>
@@ -276,7 +278,19 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 
+  <script>
+   var mq = window.matchMedia( "(max-width: 768px)");
 
+   if (mq.matches) {
+
+    $('.ipad').removeClass('col-md-5');
+
+    $('.ipad').addClass('col-md-10');
+    console.log('works');
+   } else {
+    console.log('no work');
+   }
+  </script>
 
  </body>
 </html>

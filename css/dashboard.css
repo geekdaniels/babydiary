@@ -7,7 +7,7 @@ h1,h2,h3,h4,h5,h6{
  font-family: 'Poppins', sans-serif !important;
 }
 a:hover {
-    text-decoration: none !important;
+ text-decoration: none !important;
 }
 .diary-default-bg{
  background: #EB62A3;
@@ -230,4 +230,36 @@ div.top{
 .dropdown-side::after{
  content: url(../img/Rectangle.png);
  margin-left: 130px;
+}
+/* 
+##Device = Tablets, Ipads (portrait)
+##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+ .ipad-none{
+  display: none;
+ }
+
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+
+ .no-mobile{
+  display: none !important;
+ }
+
+ .left-0 {
+  left: 0px !important;
+ }
+ 
+ .feed-item{
+ position: absolute;
+ will-change: transform;
+ top: 0px;
+ left: 0px;
+ transform: translate3d(158px, 31px, 0px) !important;
+}
+
 }
