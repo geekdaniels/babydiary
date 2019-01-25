@@ -3,7 +3,7 @@
  <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Baby diary | SignIn</title>
+  <title>Baby diary | Dashboard</title>
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/dashboard.css">
@@ -59,11 +59,57 @@
 
   <div class="container section">
    <div class="row">
-    <div class="col-md-3 diary-card">
-     <p class="text-default font-weight-bold py-3"><img src="img/Family.png" alt="family" /> MY FAMILY</p>
+    <div class="col-md-3 diary-card p-0 no-mobile ipad-none" style="max-width: 236px !important; position: absolute; left: 40px; margin-right: 60px;">
+
+     <section style="position: relative">
+      <p class="text-default font-weight-light p-3 mb-0"><img src="img/Family.png" alt="family" /> APPLESEED FAMILY</p>
+
+      <ul class="list-unstyled font-12" >
+
+       <li class="" >
+        <a href="#videos" data-toggle="collapse" aria-expanded="false" class="dropdown-side collapsed text-dark p-2 block" style="background: #C4C4C4;"> <span><img src="img/baby%20boy-dark.png" class="mb-1 mr-2" /></span>  Tunde</a>
+
+        <ul class="list-unstyled collapse show side" id="videos" style="">
+         <li class="py-2 px-3">
+          <a class="text-dark" href="dashboard.html"><span><img src="img/dashboard.png" class="mb-1 mr-2" /></span>  Dashboard</a>
+         </li>
+
+         <li class="py-2 px-3">
+          <a class="text-dark" href="immunization.html"><span><img src="img/syringe.png" class="mb-1 mr-2" /></span>  Immunization</a>
+         </li>
+
+         <li class="py-2 px-3">
+          <a class="text-dark" href="moment.html"><span><img src="img/moment_icon.png" class="mb-1 mr-2" /></span>  Moments</a>
+         </li>
+
+         <li class="py-2 px-3">
+          <a class="text-dark" href="calender.html"><span><img src="img/Calendar%20icon.png" class="mb-1 mr-2" /></span>  Calendar</a>
+         </li>
+
+         <li class="py-2 px-3">
+          <a class="text-dark" href="#"><span><img src="img/nutrition.png" class="mb-1 mr-2" /></span>  Nutrition</a>
+         </li>
+
+         <li class="py-2 px-3">
+          <a class="text-dark" href="measurement.html"><span><img src="img/rule.png" class="mb-1 mr-2" /></span>  Measurement</a>
+         </li>
+
+         <li class="py-2 px-3">
+          <a class="text-dark" href="#"><span><img src="img/statistics.png" class="mb-1 mr-2" /></span>  Growth Chart</a>
+         </li>
+
+         <li class="py-2 px-3">
+          <a class="text-dark" href="document.html"><span><img src="img/doc.png" class="mb-1 mr-2" /></span>  Documents</a>
+         </li>
+        </ul>
+       </li>
+      </ul>
+
+     </section>
+
     </div>
 
-    <div class="col-md-5 px-0 diary-card">
+    <div class="col-md-5 px-0 diary-card left-0 ipad" style="left: 315px">
      <div class="card-head">
       <p class="text-center p-3">Follow steps below for a quick start</p>
      </div>
@@ -75,7 +121,7 @@
      </div>
     </div>
 
-    <div class="col-md-3 diary-card">
+    <div class="col-md-3 diary-card no-mobile ipad-none" style="position: absolute; right: 0px">
      <p class=" text-center p-3">Share the joy</p>
      <div class="border-3 p-2">
       <p class="text-default mb-0"><img src="img/Shape-invite.png" class="mb-0 mr-2" />Invite friend to baby diary</p>
@@ -85,9 +131,12 @@
     </div>
    </div>
   </div>
-
-  <!--footer starts-->
-  <div class="container-fluid footer mt-5 bg-white p-3">
+  
+  
+  
+  
+ <!--footer starts-->
+  <div class="container-fluid footer mt-5 bg-white p-3" style="margin-top: 300px !important">
    <div class="row justify-content-center">
     <div class="col-md-4">
      <img src="img/logo-2.png" alt="baby diary logo" class="float-left mr-2" />
@@ -95,29 +144,31 @@
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation minim veniam, ercitation..</p>
     </div>
 
-    <div class="col-md-2 font-12">
+    <div class="col-3 col-md-2 font-12 pl-0 pl-md-5">
      <h6>About</h6>
      <ul class="list-unstyled">
-      <li><a class="text-dark" href="">Facebook</a></li>
-      <li><a class="text-dark" href="">Youtube</a></li>
-      <li><a class="text-dark" href="">Linkedin</a></li>
+      <li class="py-1"><a class="text-dark" href="">Facebook</a></li>
+      <li class="py-1"><a class="text-dark" href="">Youtube</a></li>
+      <li class="py-1"><a class="text-dark" href="">Linkedin</a></li>
      </ul>
     </div>
 
 
-    <div class="col-md-2 font-12">
+
+    <div class="col-3 col-md-2 font-12">
      <h6>Social</h6>
      <ul class="list-unstyled">
-      <li><a class="text-dark" href="">Facebook</a></li>
-      <li><a class="text-dark" href="">Youtube</a></li>
-      <li><a class="text-dark" href="">Linkedin</a></li>
+      <li class="py-1"><a class="text-dark" href="">Facebook</a></li>
+      <li class="py-1"><a class="text-dark" href="">Youtube</a></li>
+      <li class="py-1"><a class="text-dark" href="">Linkedin</a></li>
      </ul>
     </div>
 
-    <div class="col-md-2">
+    <div class="col-3 col-md-2">
+     <h6>Downloads</h6>
      <ul class="list-unstyled">
-      <li><a href="#"><img src="img/google-app.png" alt="baby-diary-app-download" /></a></li>
-      <li><a href="#"><img src="img/iphone-app.png" alt="baby-diary-app-download" /></a></li>
+      <li class="py-1"><a href="#"><img class="img-fluid" src="img/google-app.png" alt="baby-diary-app-download" /></a></li>
+      <li class="py-1"><a href="#"><img class="img-fluid" src="img/iphone-app.png" alt="baby-diary-app-download" /></a></li>
      </ul>
 
     </div>
@@ -131,12 +182,23 @@
    </div>
   </div>
   <!--footer ends-->
-
-
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
-  <script src=""></script>
+
+  <script>
+   var mq = window.matchMedia( "(max-width: 768px)");
+
+   if (mq.matches) {
+
+    $('.ipad').removeClass('col-md-5');
+
+    $('.ipad').addClass('col-md-10');
+    console.log('works');
+   } else {
+    console.log('no work');
+   }
+  </script>
 
  </body>
 </html>

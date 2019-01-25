@@ -173,7 +173,7 @@ div.top{
  font-weight: normal
 }
 .border-right-measurement{
- border-right: 2px solid #C4C4C4;
+/* border-right: 2px solid #C4C4C4;*/
 }
 
 .measure td{
@@ -241,7 +241,9 @@ div.top{
  .ipad-none{
   display: none;
  }
-
+.left-0 {
+  left: 0px !important;
+ }
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
@@ -253,13 +255,13 @@ div.top{
  .left-0 {
   left: 0px !important;
  }
- 
+
  .feed-item{
- position: absolute;
- will-change: transform;
- top: 0px;
- left: 0px;
- transform: translate3d(158px, 31px, 0px) !important;
-}
+  position: absolute;
+  will-change: transform;
+  top: 0px;
+  left: 0px;
+  transform: translate3d(120px, 31px, 0px) !important;
+ }
 
 }

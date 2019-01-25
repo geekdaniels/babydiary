@@ -63,14 +63,60 @@
   <div class="container section">
 
    <div class="row">
-    <div class="col-md-3 diary-card">
-     <p class="text-default font-weight-bold py-3 mb-0"><img src="img/Family.png" alt="family" /> MY FAMILY</p>
+    <div class="col-md-3 diary-card p-0 no-mobile" style="max-width: 236px !important; position: absolute; left: 40px; margin-right: 60px;">
+
+     <section style="position: relative">
+      <p class="text-default font-weight-light p-3 mb-0"><img src="img/Family.png" alt="family" /> APPLESEED FAMILY</p>
+
+      <ul class="list-unstyled font-12" >
+
+       <li class="" >
+        <a href="#videos" data-toggle="collapse" aria-expanded="false" class="dropdown-side collapsed text-dark p-2 block" style="background: #C4C4C4;"> <span><img src="img/baby%20boy-dark.png" class="mb-1 mr-2" /></span>  Tunde</a>
+
+        <ul class="list-unstyled collapse show side" id="videos" style="">
+         <li class="py-2 px-3">
+          <a class="text-dark" href="dashboard.html"><span><img src="img/dashboard.png" class="mb-1 mr-2" /></span>  Dashboard</a>
+         </li>
+
+         <li class="py-2 px-3">
+          <a class="text-dark" href="immunization.html"><span><img src="img/syringe.png" class="mb-1 mr-2" /></span>  Immunization</a>
+         </li>
+
+         <li class="py-2 px-3">
+          <a class="text-dark" href="moment.html"><span><img src="img/moment_icon.png" class="mb-1 mr-2" /></span>  Moments</a>
+         </li>
+
+         <li class="py-2 px-3">
+          <a class="text-dark" href="calender.html"><span><img src="img/Calendar%20icon.png" class="mb-1 mr-2" /></span>  Calendar</a>
+         </li>
+
+         <li class="py-2 px-3">
+          <a class="text-dark" href="#"><span><img src="img/nutrition.png" class="mb-1 mr-2" /></span>  Nutrition</a>
+         </li>
+
+         <li class="py-2 px-3">
+          <a class="text-dark" href="measurement.html"><span><img src="img/rule.png" class="mb-1 mr-2" /></span>  Measurement</a>
+         </li>
+
+         <li class="py-2 px-3">
+          <a class="text-dark" href="#"><span><img src="img/statistics.png" class="mb-1 mr-2" /></span>  Growth Chart</a>
+         </li>
+
+         <li class="py-2 px-3">
+          <a class="text-dark" href="document.html"><span><img src="img/doc.png" class="mb-1 mr-2" /></span>  Documents</a>
+         </li>
+        </ul>
+       </li>
+      </ul>
+
+     </section>
+
     </div>
 
-    <div class="col-md-5 px-0 diary-card">
+    <div class="col-md-5 px-0 diary-card left-0" style="left: 315px">
      <div class="row">
 
-      <div class="col-md-5">
+      <div class="col-md-5 d-none d-sm-block">
        <p class="p-3 text-default"><img src="img/syringe.png" alt="family" /> IMMUNIZATION</p>
       </div>
 
@@ -81,7 +127,7 @@
      </div>
     </div>
 
-    <div class="col-md-3 diary-card r-position" style="right: 0px;">
+    <div class="col-md-3 diary-card no-mobile" style="position: absolute; right: 0px">
      <h5 class="text-center p-3 text-default">DISCLAIMER</h5>
 
      <p class="small">Please do not consider the immunisations mentioned or marked as popular in the list as advice.
@@ -99,7 +145,7 @@
 
 
 
-    <div class="col-md-5 px-0">
+    <div class="col-md-5">
 
      <div class="row justify-content-center">
       <div class="col-md-11">
@@ -111,6 +157,7 @@
       </div>
      </div>
 
+     <!--     section one-->
      <div class="segment">
       <div class="card-head">
        <div class="row">
@@ -155,7 +202,8 @@
       </div>
 
      </div>
-     <div>
+
+     <div class="">
       <div class="card-head">
        <div class="row">
         <div class="col-md-10">
@@ -168,9 +216,9 @@
        <div class="col-md-11 p-2 m-2 immunization">
         <span><img src="img/verified.png" alt="verified" class="mb-1" /> 6 WEEKS </span>
         <span class="small offset-md-3"><img src="img/location.png" /> R SAMPLE HOSPITAL, LAGOS 
-         <a href="#"><img src="img/delete.png" alt="delete" class="ml-3 mb-1" width="12px" /></a> 
+         <a href="#"><img src="img/delete.png" alt="delete" class="ml-1 mb-1" width="12px" /></a> 
 
-         <a href="#"><img src="img/edit%202.png" alt="delete" class="ml-3 mb-1" width="12px" /></a>
+         <a href="#"><img src="img/edit%202.png" alt="delete" class="ml-2 mb-1" width="12px" /></a>
         </span>
        </div>
 
@@ -184,8 +232,11 @@
    </div>
 
   </div>
-  
-   <!--footer starts-->
+
+
+
+
+  <!--footer starts-->
   <div class="container-fluid footer mt-5 bg-white p-3">
    <div class="row justify-content-center">
     <div class="col-md-4">
@@ -194,30 +245,31 @@
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation minim veniam, ercitation..</p>
     </div>
 
-    <div class="col-md-2 font-12">
+    <div class="col-3 col-md-2 font-12 pl-0 pl-md-5">
      <h6>About</h6>
      <ul class="list-unstyled">
-      <li><a class="text-dark" href="">Facebook</a></li>
-      <li><a class="text-dark" href="">Youtube</a></li>
-      <li><a class="text-dark" href="">Linkedin</a></li>
+      <li class="py-1"><a class="text-dark" href="">Facebook</a></li>
+      <li class="py-1"><a class="text-dark" href="">Youtube</a></li>
+      <li class="py-1"><a class="text-dark" href="">Linkedin</a></li>
      </ul>
     </div>
 
 
 
-    <div class="col-md-2 font-12">
+    <div class="col-3 col-md-2 font-12">
      <h6>Social</h6>
      <ul class="list-unstyled">
-      <li><a class="text-dark" href="">Facebook</a></li>
-      <li><a class="text-dark" href="">Youtube</a></li>
-      <li><a class="text-dark" href="">Linkedin</a></li>
+      <li class="py-1"><a class="text-dark" href="">Facebook</a></li>
+      <li class="py-1"><a class="text-dark" href="">Youtube</a></li>
+      <li class="py-1"><a class="text-dark" href="">Linkedin</a></li>
      </ul>
     </div>
 
-    <div class="col-md-2">
+    <div class="col-3 col-md-2">
+     <h6>Downloads</h6>
      <ul class="list-unstyled">
-      <li><a href="#"><img src="img/google-app.png" alt="baby-diary-app-download" /></a></li>
-      <li><a href="#"><img src="img/iphone-app.png" alt="baby-diary-app-download" /></a></li>
+      <li class="py-1"><a href="#"><img class="img-fluid" src="img/google-app.png" alt="baby-diary-app-download" /></a></li>
+      <li class="py-1"><a href="#"><img class="img-fluid" src="img/iphone-app.png" alt="baby-diary-app-download" /></a></li>
      </ul>
 
     </div>
