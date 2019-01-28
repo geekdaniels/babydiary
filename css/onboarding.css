@@ -127,3 +127,14 @@ body{
 .visible{
  display: block !important;
 }
+
+
+@media (min-width: 320px) and (max-width: 767px) {
+
+.log-box{
+ min-width: 291px !important;
+ max-width: 295px !important;
+}
+
+
+}

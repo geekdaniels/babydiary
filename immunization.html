@@ -3,7 +3,7 @@
  <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Baby diary | Moments</title>
+  <title>Baby diary | Immunization</title>
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
   <link rel="stylesheet" href="css/reset.css"> 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
@@ -358,7 +358,7 @@
 
         <div class="col">
          <label for="">Event starts</label>
-         <input type="text" id="date-format" class="form-control floating-label" placeholder="Begin Date/Time">
+         <input type="text" id="date-start" class="form-control floating-label" placeholder="Begin Date/Time">
         </div>
 
         <div class="col">
@@ -411,15 +411,12 @@
     ({
      format: 'dddd DD MMMM YYYY - HH:mm'
     });
-    $('#date-fr').bootstrapMaterialDatePicker
+    
+    $('#date-start').bootstrapMaterialDatePicker
     ({
-     format: 'DD/MM/YYYY HH:mm',
-     lang: 'fr',
-     weekStart: 1, 
-     cancelText : 'ANNULER',
-     nowButton : true,
-     switchOnClick : true
+     format: 'dddd DD MMMM YYYY - HH:mm'
     });
+    
 
     $('#date-end').bootstrapMaterialDatePicker
     ({

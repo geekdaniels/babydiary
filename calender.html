@@ -285,7 +285,7 @@
 
         <div class="col">
          <label for="">Event ends</label>
-         <input type="text" id="date-format" class="form-control floating-label" placeholder="End Date Time">
+         <input type="text" id="end-date" class="form-control floating-label" placeholder="End Date Time">
         </div>
 
        </div>
@@ -337,14 +337,11 @@
     ({
      format: 'dddd DD MMMM YYYY - HH:mm'
     });
-    $('#date-fr').bootstrapMaterialDatePicker
+
+
+    $('#end-date').bootstrapMaterialDatePicker
     ({
-     format: 'DD/MM/YYYY HH:mm',
-     lang: 'fr',
-     weekStart: 1, 
-     cancelText : 'ANNULER',
-     nowButton : true,
-     switchOnClick : true
+     format: 'dddd DD MMMM YYYY - HH:mm'
     });
 
     $('#date-end').bootstrapMaterialDatePicker
