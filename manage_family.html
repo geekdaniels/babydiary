@@ -5,8 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Baby diary | Manage Family</title>
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css"> 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/demo.css">
   <link rel="stylesheet" href="css/datepicker.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
  </head>
@@ -16,7 +19,7 @@
    <div class="container" >
     <nav class="navbar navbar-expand-lg navbar-light ">
      <a class="navbar-brand" href="#"><img src="img/Baby's%20Dairy%20logo%20white.png" alt="Bbaydiary logo" width="45px"/></a>
-     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+     <button class="navbar-toggler d-none" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
      </button>
      <div class="collapse navbar-collapse" id="navbarNav">
@@ -25,7 +28,7 @@
         <a class="nav-link text-white" href="index.html">Home <span class="sr-only">(current)</span></a>
        </li>
        <li class="nav-item px-md-4">
-        <a class="nav-link text-white" href="blog.html">My family</a>
+        <a class="nav-link text-white" href="manage_family.html">My family</a>
        </li>
 
       </ul>
@@ -59,19 +62,35 @@
 
   </div>
 
+  <div class="cd-tabs js-cd-tabs">
+   <nav>
+    <ul class="cd-tabs__navigation js-cd-navigation">
+     <li><a data-content="inbox"  href="feed.html">Feeds</a></li>
+     <li><a data-content="moment"  href="moment.html">Moments</a></li>
+     <li><a data-content="docs" href="document.html">Documents</a></li>
+     <li><a data-content="measurement" href="measurement.html">Measurement</a></li>
+
+     <li><a data-content="immunize"  href="immunization.html">Immunization</a></li>
+     <li><a data-content="chart" href="manage_family.html" class="cd-selected">Manage family</a></li>
+    </ul>  
+    <!--    cd-tabs__navigation -->
+   </nav>
+
+  </div>
+  
   <div class="container section">
    <div class="row">
     <div class="col-md-12 diary-card">
      <div class="row">
-      <div class="col-md-3">
+      <div class="col-md-3 d-none d-sm-block">
        <p class="text-default py-3 mb-0"><img src="img/manage-family.png" alt="family" /> Manage Family</p>
       </div>
 
-      <div class="offset-md-3 col-md-3">
+      <div class="offset-md-3 col-md-3 col-6">
        <button type="button" class="btn btn-large btn-default my-2" data-toggle="modal" data-target="#addFamily"><img src="img/add-member.png" /> Add member</button>
       </div>
 
-      <div class="col-md-3">
+      <div class="col-md-3 col-6">
        <button class="btn btn-large btn-default my-2" data-toggle="modal" data-target="#addPregnancy"><img src="img/add-pregnanvy.png" /> Add pregnancy</button>
       </div>
 
@@ -104,9 +123,11 @@
          <p class="small text-center">bellion@exolve.com</p>
         </div>
 
-        <div class="card-bg-footer p-2">
-         <p class="text-white mb-0">Creator</p>
-        </div>
+        <!--
+<div class="card-bg-footer p-2">
+<p class="text-white mb-0">Creator</p>
+</div>
+-->
 
        </div>
       </div>
@@ -116,7 +137,11 @@
    </div>
   </div>
 
-   <!--footer starts-->
+
+  
+  
+  
+  <!--footer starts-->
   <div class="container-fluid footer mt-5 bg-white p-3">
    <div class="row justify-content-center">
     <div class="col-md-4">
@@ -125,30 +150,31 @@
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation minim veniam, ercitation..</p>
     </div>
 
-    <div class="col-md-2 font-12">
+    <div class="col-3 col-md-2 font-12 pl-0 pl-md-5">
      <h6>About</h6>
      <ul class="list-unstyled">
-      <li><a class="text-dark" href="">Facebook</a></li>
-      <li><a class="text-dark" href="">Youtube</a></li>
-      <li><a class="text-dark" href="">Linkedin</a></li>
+      <li class="py-1"><a class="text-dark" href="">Facebook</a></li>
+      <li class="py-1"><a class="text-dark" href="">Youtube</a></li>
+      <li class="py-1"><a class="text-dark" href="">Linkedin</a></li>
      </ul>
     </div>
 
 
 
-    <div class="col-md-2 font-12">
+    <div class="col-3 col-md-2 font-12">
      <h6>Social</h6>
      <ul class="list-unstyled">
-      <li><a class="text-dark" href="">Facebook</a></li>
-      <li><a class="text-dark" href="">Youtube</a></li>
-      <li><a class="text-dark" href="">Linkedin</a></li>
+      <li class="py-1"><a class="text-dark" href="">Facebook</a></li>
+      <li class="py-1"><a class="text-dark" href="">Youtube</a></li>
+      <li class="py-1"><a class="text-dark" href="">Linkedin</a></li>
      </ul>
     </div>
 
-    <div class="col-md-2">
+    <div class="col-3 col-md-2">
+     <h6>Downloads</h6>
      <ul class="list-unstyled">
-      <li><a href="#"><img src="img/google-app.png" alt="baby-diary-app-download" /></a></li>
-      <li><a href="#"><img src="img/iphone-app.png" alt="baby-diary-app-download" /></a></li>
+      <li class="py-1"><a href="#"><img class="img-fluid" src="img/google-app.png" alt="baby-diary-app-download" /></a></li>
+      <li class="py-1"><a href="#"><img class="img-fluid" src="img/iphone-app.png" alt="baby-diary-app-download" /></a></li>
      </ul>
 
     </div>

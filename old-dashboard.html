@@ -3,22 +3,19 @@
  <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Baby diary | Upload Document</title>
+  <title>Baby diary | Dashboard</title>
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
-  <link rel="stylesheet" href="css/reset.css"> 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/dashboard.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/demo.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
  </head>
 
  <body class="">
   <div class="container-fliud diary-default-bg">
    <div class="container" >
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg navbar-light ">
      <a class="navbar-brand" href="#"><img src="img/Baby's%20Dairy%20logo%20white.png" alt="Bbaydiary logo" width="45px"/></a>
-     <button class="navbar-toggler d-none" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
      </button>
      <div class="collapse navbar-collapse" id="navbarNav">
@@ -27,16 +24,15 @@
         <a class="nav-link text-white" href="index.html">Home <span class="sr-only">(current)</span></a>
        </li>
        <li class="nav-item px-md-4">
-        <a class="nav-link text-white" href="manage_family.html">My family</a>
+        <a class="nav-link text-white" href="blog.html">My family</a>
        </li>
 
       </ul>
 
       <ul class="navbar-nav ml-auto">
        <li class="nav-item active px-md-4">
-        <a class="nav-link text-white" href="index.html"><img class="py-1" src="img/notification_icon.png" alt="notification icon"  /> Notifications</a>
+        <a class="nav-link text-white" href="index.html"><img class="py-1" src="img/notification_icon.png" alt="notification icon"  /></a>
        </li>
-
        <li class="nav-item dropdown px-md-4">
         <a class="nav-link text-white dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
          Adeleke &nbsp<img src="img/user.png" alt="user profile" width="25" />
@@ -55,35 +51,15 @@
     </nav>
    </div>
   </div>
-
   <!--   navigation ends-->
 
   <div class="container-fluid top">
 
   </div>
 
-  <div class="cd-tabs js-cd-tabs">
-   <nav>
-    <ul class="cd-tabs__navigation js-cd-navigation">
-     <li><a data-content="inbox"  href="feed.html">Feeds</a></li>
-     <li><a data-content="moment" href="moment.html">Moments</a></li>
-     <li><a data-content="docs" class="cd-selected" href="document.html">Documents</a></li>
-     <li><a data-content="measurement" href="measurement.html">Measurement</a></li>
-
-     <li><a data-content="immunize" href="immunization.html">Immunization</a></li>
-     <li><a data-content="chart" href="manage_family.html">Manage family</a></li>
-    </ul>  
-    <!--    cd-tabs__navigation -->
-   </nav>
-
-  </div>
-
-
-
   <div class="container section">
-
    <div class="row">
-    <div class="col-md-3 diary-card p-0 no-mobile" style="max-width: 236px !important; position: absolute; left: 40px; margin-right: 60px;">
+    <div class="col-md-3 diary-card p-0 no-mobile ipad-none" style="max-width: 236px !important; position: absolute; left: 40px; margin-right: 60px;">
 
      <section style="position: relative">
       <p class="text-default font-weight-light p-3 mb-0"><img src="img/Family.png" alt="family" /> APPLESEED FAMILY</p>
@@ -96,7 +72,7 @@
 
         <ul class="list-unstyled collapse side" id="family" style="" aria-labelledby="family">
          <li class="py-2 px-3">
-          <a class="text-dark" href="feed.html"><span><img src="img/dashboard.png" class="mb-1 mr-2" /></span>  Dashboard</a>
+          <a class="text-dark" href="dashboard.html"><span><img src="img/dashboard.png" class="mb-1 mr-2" /></span>  Dashboard</a>
          </li>
 
          <li class="py-2 px-3">
@@ -129,94 +105,38 @@
         </ul>
        </li>
       </ul>
-
      </section>
 
     </div>
 
-
-    <div class="col-md-5 px-0 diary-card left-0" style="left: 315px">
-     <div class="row">
-
-      <div class="col-md-5 d-none d-sm-block">
-       <p class="p-3 mb-0 text-default"><img src="img/doc.png" alt="document" /> DOCUMENT</p>
-      </div>
-
-      <div class="offset-md-4 col-md-2">
-       <button type="button" class="btn btn-large btn-grey m-2" data-toggle="modal" data-target="#measurement">Upload</button>
-      </div>
-
+    <div class="col-md-5 px-0 diary-card left-0 ipad" style="left: 315px">
+     <div class="card-head">
+      <p class="text-center p-3">Follow steps below for a quick start</p>
+     </div>
+     <div class="p-2 m-3 diary-center-border">
+      <p class="mb-1 font-weight-bold">Update profile to access our features</p>
+      <p class="small">Filling the required information enables you to enjoy our services.</p>
+      <img src="img/status.png" alt="status" class="img-fluid" />
+      <p class="small">20% completed.</p>
      </div>
     </div>
 
-    <div class="col-md-3 diary-card no-mobile" style="position: absolute; right: 0px">
-     <h6 class="text-center p-3 text-default font-12">KEEP YOUR DOCUMENTS UPDATED!</h6>
-    </div>
-
-   </div>
-
-
-   <div class="row justify-content-center  mx-0">
-
-    <div class="col-md-5 px-0">
-
-     <div class="row justify-content-center">
-      <div class="col-md-11 m-2 measurment-center-border">
-
-       <div class="row justify-content-center my-3">
-        <div class="col-md-11 measurement-border">
-         <p class="p-2 text-dark">Documents</p>
-
-         <table class="table measure">
-          <thead>
-           <tr>
-            <th scope="col" class="font-9">Serial No.</th>
-            <th scope="col" class="font-9">Name</th>
-            <th scope="col" class="font-9">Type</th>
-            <th scope="col" class="font-9">Last Modified</th>
-
-           </tr>
-          </thead>
-          <tbody>
-           <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-
-           </tr>
-           <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-
-           </tr>
-
-          </tbody>
-         </table>
-        </div>
-       </div>
-
-      </div>
-
+    <div class="col-md-3 diary-card no-mobile ipad-none" style="position: absolute; right: 0px">
+     <p class=" text-center p-3">Share the joy</p>
+     <div class="border-3 p-2">
+      <p class="text-default mb-0"><img src="img/Shape-invite.png" class="mb-0 mr-2" />Invite friend to baby diary</p>
      </div>
-
-
+     <p class="my-3">Tell other parents and make thier life easy as yours</p>
 
     </div>
-
-
-
    </div>
-
   </div>
 
 
 
 
   <!--footer starts-->
-  <div class="container-fluid footer bg-white p-3" style="margin-top: 150px">
+  <div class="container-fluid footer mt-5 bg-white p-3" style="margin-top: 300px !important">
    <div class="row justify-content-center">
     <div class="col-md-4">
      <img src="img/logo-2.png" alt="baby diary logo" class="float-left mr-2" />
@@ -262,61 +182,23 @@
    </div>
   </div>
   <!--footer ends-->
-
-
-
-  <!--Add member Modal -->
-  <div class="modal fade" id="measurement" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-   <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-     <div class="modal-header">
-      <h5 class="modal-title" id="exampleModalLongTitle">Upload document</h5>
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-       <span aria-hidden="true">&times;</span>
-      </button>
-     </div>
-     <div class="modal-body">
-      <form>
-
-       <div class="form-row justify-content-center my-3">
-        <div class="col">
-         <input type="text" class="form-control floating-label" placeholder="Document name">
-        </div>
-
-        <div class="col">
-         <select class="form-control" id="">
-          <option>General</option>
-          <option>School Related</option>
-          <option>Health</option>
-          <option>Award of Honour</option>
-         </select>
-        </div>
-
-       </div>
-
-
-       <div class="form-row justify-content-center my-3">
-        <div class="col">
-         <div class="upload-btn-wrapper">
-          <button class="btn-upload">Choose a file</button>
-          <input type="file" name="myfile" />
-         </div>
-        </div>
-       </div>
-
-      </form>
-     </div>
-     <div class="modal-footer">
-      <button type="button" class="offset-md-2 btn btn-grey px-4">Upload</button>  
-     </div>
-    </div>
-   </div>
-  </div>
-
-
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+  <script>
+   var mq = window.matchMedia( "(max-width: 768px)");
+
+   if (mq.matches) {
+
+    $('.ipad').removeClass('col-md-5');
+
+    $('.ipad').addClass('col-md-10');
+    console.log('works');
+   } else {
+    console.log('no work');
+   }
+  </script>
 
  </body>
 </html>
