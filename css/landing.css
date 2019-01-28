@@ -60,7 +60,7 @@ h1,h2,h3,h4,h5,h6{
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  min-height: 80vh;
+/*  min-height: 105vh;*/
  }
 
  .vertical{

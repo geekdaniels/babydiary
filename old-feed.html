@@ -7,14 +7,17 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/dashboard.css">
-  <!--  <link rel="stylesheet" href="css/slidebars.min.css">-->
-  <!--  <link rel="stylesheet" href="css/style.css">-->
+  <link rel="stylesheet" href="css/slidebars.min.css">
+  <link rel="stylesheet" href="css/slide.css">
+<!--  <link rel="stylesheet" href="css/style.css">-->
 
  </head>
 
  <body class="">
 
-  <div class="container-fliud diary-default-bg">
+  
+<div class="close-alt">
+    <div class="container-fliud diary-default-bg">
    <div class="container" >
     <nav class="navbar navbar-expand-lg navbar-light ">
      <a class="navbar-brand" href="#"><img src="img/Baby's%20Dairy%20logo%20white.png" alt="Bbaydiary logo" width="45px"/></a>
@@ -138,7 +141,6 @@
 
    <div class="row justify-content-center">
 
-
     <div class="col-md-5 px-0 diary-card">
      <div class="">
       <div class="row">
@@ -250,6 +252,9 @@
    </div>
   </div>
 
+  
+</div>
+  
   <div off-canvas="main-menu left overlay">
    <img id="logo-menu" src="img/Baby's%20Dairy%20logo%20white.png" alt="Babydiary">
 
@@ -292,24 +297,6 @@
      var controller = new slidebars();
      controller.init();
 
-
-     // Add close class to canvas container when Slidebar is opened
-     $( controller.events ).on( 'opening', function ( event ) {
-      $( '[canvas]' ).addClass( 'js-close-any' );
-     } );
-
-     // Add close class to canvas container when Slidebar is opened
-     $( controller.events ).on( 'closing', function ( event ) {
-      $( '[canvas]' ).removeClass( 'js-close-any' );
-     } );
-
-     // Left demo
-     //     $( '.js-toggle-main-menu' ).on( 'click', function ( event ) {
-     //      event.preventDefault();
-     //      event.stopPropagation();
-     //      controller.open( 'main-menu' );
-     //     } );
-
      // Overlay demo
      $( '.js-toggle-main-menu' ).on( 'click', function ( event ) {
       event.preventDefault();
@@ -323,46 +310,14 @@
       controller.close( 'main-menu' );
      } );
 
-     // Mobile only
-     var windowWidth,
-         mobileOnly = function () {
-          windowWidth = $( window ).width();
-
-          if ( windowWidth > 600 ) {
-           controller.close( 'main-menu' );
-          }
-         };
-
-     mobileOnly();
-     $( window ).on( 'resize', mobileOnly );
-
-     $( '.js-open-demo-mobile-only' ).on( 'click', function ( event ) {
-      event.preventDefault();
-      event.stopPropagation();
-
-      if ( windowWidth < 601 ) {
-       controller.open( 'demo-mobile-only' );
-      }
-     } );
-
-     $( '.js-toggle-demo-mobile-only' ).on( 'click', function ( event ) {
-      event.preventDefault();
-      event.stopPropagation();
-
-      if ( windowWidth < 601 ) {
-       controller.toggle( 'demo-mobile-only' );
-      }
-     } );
-
-     $( '.js-close-demo-mobile-only' ).on( 'click', function ( event ) {
-      event.preventDefault();
-      event.stopPropagation();
-      controller.close( 'demo-mobile-only' );
-     } );
-
 
     } );
    } ) ( jQuery );
+   
+   $('.close-alt').on('click', function(){
+    console.log($(this));
+    $('.js-close-any').trigger('click')})
+   
   </script>
 
  </body>
