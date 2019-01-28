@@ -5,8 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Baby diary | Moments</title>
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css"> 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/demo.css">
+
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   <link rel="stylesheet" href="css/bootstrap-material-datetimepicker.css"/>
  </head>
@@ -14,7 +18,7 @@
  <body class="">
   <div class="container-fliud diary-default-bg">
    <div class="container" >
-    <nav class="navbar navbar-expand-lg navbar-light ">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
      <a class="navbar-brand" href="#"><img src="img/Baby's%20Dairy%20logo%20white.png" alt="Bbaydiary logo" width="45px"/></a>
      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -60,6 +64,22 @@
 
   </div>
 
+  <div class="cd-tabs js-cd-tabs">
+   <nav>
+    <ul class="cd-tabs__navigation js-cd-navigation">
+     <li><a data-content="inbox"  href="feed-tab.html">Feeds</a></li>
+     <li><a data-content="moment"  href="moment.html">Moments</a></li>
+     <li><a data-content="docs" href="document.html">Documents</a></li>
+     <li><a data-content="measurement" href="measurement.html">Measurement</a></li>
+     <li><a data-content="chart" href="#0">Chart</a></li>
+
+     <li><a data-content="immunize" class="cd-selected" href="immunization.html">Immunization</a></li>
+    </ul>  
+    <!--    cd-tabs__navigation -->
+   </nav>
+
+  </div>
+
   <div class="container section">
 
    <div class="row">
@@ -68,7 +88,7 @@
      <section style="position: relative">
       <p class="text-default font-weight-light p-3 mb-0"><img src="img/Family.png" alt="family" /> APPLESEED FAMILY</p>
 
-     <ul class="list-unstyled font-12" >
+      <ul class="list-unstyled font-12" >
 
        <li class="" >
         <a href="#" class="dropdown-side text-dark p-2 block" style="background: #C4C4C4;" data-toggle="collapse" data-target="#family" aria-controls="family" aria-expanded="false" aria-label="Toggle navigation"> <span><img src="img/baby%20boy-dark.png" class="mb-1 mr-2" /></span>  Tunde</a>

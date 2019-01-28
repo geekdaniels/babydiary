@@ -6,8 +6,11 @@
   <title>Baby diary | Calender</title>
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <link rel="stylesheet" href="css/reset.css"> 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/demo.css">
   <link rel="stylesheet" href="css/ion.rangeSlider.css">
   <link rel="stylesheet" href="css/ion.rangeSlider.skinHTML5.css">
   <link rel="stylesheet" href="css/bootstrap-material-datetimepicker.css"/>
@@ -17,7 +20,7 @@
  <body class="">
   <div class="container-fliud diary-default-bg">
    <div class="container" >
-    <nav class="navbar navbar-expand-lg navbar-light ">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
      <a class="navbar-brand" href="#"><img src="img/Baby's%20Dairy%20logo%20white.png" alt="Bbaydiary logo" width="45px"/></a>
      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -60,6 +63,22 @@
   <!--   navigation ends-->
 
   <div class="container-fluid top">
+
+  </div>
+
+  <div class="cd-tabs js-cd-tabs">
+   <nav>
+    <ul class="cd-tabs__navigation js-cd-navigation">
+     <li><a data-content="inbox"  href="feed-tab.html">Feeds</a></li>
+     <li><a data-content="moment"  href="moment.html">Moments</a></li>
+     <li><a data-content="docs" href="document.html">Documents</a></li>
+     <li><a data-content="measurement" href="measurement.html">Measurement</a></li>
+     <li><a data-content="chart" href="#0">Chart</a></li>
+
+     <li><a data-content="immunize" href="immunization.html">Immunization</a></li>
+    </ul>  
+    <!--    cd-tabs__navigation -->
+   </nav>
 
   </div>
 
@@ -171,7 +190,7 @@
 
   </div>
 
-   <!--footer starts-->
+  <!--footer starts-->
   <div class="container-fluid footer bg-white p-3" style="margin-top: 400px;">
    <div class="row justify-content-center">
     <div class="col-md-4">
