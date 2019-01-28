@@ -52,3 +52,22 @@ h1,h2,h3,h4,h5,h6{
 .bg-2{
  background: rgba(187, 107, 217, 0.19);
 }
+
+@media (min-width: 320px) and (max-width: 767px) {
+
+ .banner{
+  background-image: url(../img/bg-home-3.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 80vh;
+ }
+
+ .vertical{
+  margin-top:5%;
+ }
+
+ .img-mob{
+  width: 130px !important;
+ }
+}
