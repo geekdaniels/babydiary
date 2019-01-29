@@ -231,6 +231,11 @@ div.top{
  content: url(../img/Rectangle.png);
  margin-left: 130px;
 }
+
+.dropdown-side-2::after{
+ content: url(../img/Rectangle-2.png);
+ margin-left: 130px;
+}
 /* 
 ##Device = Tablets, Ipads (portrait)
 ##Screen = B/w 768px to 1024px

@@ -8,309 +8,343 @@
   <link rel="stylesheet" href="css/reset.css"> 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/dashboard.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/demo.css">
+  <link rel="stylesheet" href="css/slidebars.min.css">
+  <link rel="stylesheet" href="css/slide.css"> 
   <link href="css/jquery.datepick.css" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   <style>
    .datepick-popup{
-        z-index: 10000 !important;
+    z-index: 10000 !important;
    }
   </style>
  </head>
 
  <body class="">
-  <div class="container-fliud diary-default-bg">
-   <div class="container" >
-    <nav class="navbar navbar-expand-lg navbar-light ">
-     <a class="navbar-brand" href="#"><img src="img/Baby's%20Dairy%20logo%20white.png" alt="Bbaydiary logo" width="45px"/></a>
-     <button class="navbar-toggler d-none" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-     </button>
-     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-       <li class="nav-item active px-md-4">
-        <a class="nav-link text-white" href="index.html">Home <span class="sr-only">(current)</span></a>
-       </li>
-       <li class="nav-item px-md-4">
-        <a class="nav-link text-white" href="manage_family.html">My family</a>
-       </li>
 
-      </ul>
+  <div class="close-alt">
+   <div class="container-fliud diary-default-bg">
+    <div class="container" >
+     <nav class="navbar navbar-expand-lg navbar-dark ">
+      <a class="navbar-brand" href="#"><img src="img/Baby's%20Dairy%20logo%20white.png" alt="Bbaydiary logo" width="45px"/></a>
+      <button class="navbar-toggler js-toggle-main-menu" type="button" >
+       <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+       <ul class="navbar-nav">
+        <li class="nav-item active px-md-4">
+         <a class="nav-link text-white" href="index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item px-md-4">
+         <a class="nav-link text-white" href="manage_family.html">My family</a>
+        </li>
 
-      <ul class="navbar-nav ml-auto">
-       <li class="nav-item active px-md-4">
-        <a class="nav-link text-white" href="index.html"><img class="py-1" src="img/notification_icon.png" alt="notification icon"  /></a>
-       </li>
-       <li class="nav-item dropdown px-md-4">
-        <a class="nav-link text-white dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-         Adeleke &nbsp<img src="img/user.png" alt="user profile" width="25" />
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-         <a class="dropdown-item" href="#">Settings</a>
-         <div class="divider"></div>
-         <a class="dropdown-item" href="#">Invite Friends</a>
-         <div class="divider"></div>
-         <a class="dropdown-item" href="#">Sign Out</a>
-        </div>
-       </li>
+       </ul>
 
-      </ul>
-     </div>
-    </nav>
-   </div>
-  </div>
+       <ul class="navbar-nav ml-auto">
+        <li class="nav-item active px-md-4">
+         <a class="nav-link text-white" href="index.html"><img class="py-1" src="img/notification_icon.png" alt="notification icon"  /></a>
+        </li>
+        <li class="nav-item dropdown px-md-4">
+         <a class="nav-link text-white dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Adeleke &nbsp<img src="img/user.png" alt="user profile" width="25" />
+         </a>
+         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Settings</a>
+          <div class="divider"></div>
+          <a class="dropdown-item" href="#">Invite Friends</a>
+          <div class="divider"></div>
+          <a class="dropdown-item" href="#">Sign Out</a>
+         </div>
+        </li>
 
-  <!--   navigation ends-->
-
-  <div class="container-fluid top">
-
-  </div>
-
-  <div class="cd-tabs js-cd-tabs">
-   <nav>
-    <ul class="cd-tabs__navigation js-cd-navigation">
-     <li><a data-content="inbox"  href="feed.html">Feeds</a></li>
-     <li><a data-content="moment"  href="moment.html">Moments</a></li>
-     <li><a data-content="docs" href="document.html">Documents</a></li>
-     <li><a data-content="measurement" href="measurement.html">Measurement</a></li>
-
-     <li><a data-content="immunize"  href="immunization.html">Immunization</a></li>
-     <li><a data-content="chart" href="manage_family.html" class="cd-selected">Manage family</a></li>
-    </ul>  
-    <!--    cd-tabs__navigation -->
-   </nav>
-
-  </div>
-
-  <div class="container section">
-   <div class="row">
-    <div class="col-md-12 diary-card">
-     <div class="row">
-      <div class="col-md-3 d-none d-sm-block">
-       <p class="text-default py-3 mb-0"><img src="img/manage-family.png" alt="family" /> Manage Family</p>
+       </ul>
       </div>
-
-      <div class="offset-md-3 col-md-3 col-6">
-       <button type="button" class="btn btn-large btn-default my-2" data-toggle="modal" data-target="#addFamily"><img src="img/add-member.png" /> Add member</button>
-      </div>
-
-      <div class="col-md-3 col-6">
-       <button class="btn btn-large btn-default my-2" data-toggle="modal" data-target="#addPregnancy"><img src="img/add-pregnanvy.png" /> Add pregnancy</button>
-      </div>
-
-     </div>
+     </nav>
     </div>
    </div>
 
+   <!--   navigation ends-->
 
-   <div class="row">
+   <div class="container-fluid top">
+
+   </div>
 
 
-    <div class="col-md-12 px-0 diary-card">
-     <div class="card-head">
+   <div class="container section">
+    <div class="row">
+     <div class="col-md-12 diary-card">
       <div class="row">
-       <div class="col-md-3">
-        <p class="text-default p-3 mb-0"> My Family<br>
-         <span class="small">Family ID : 7552288</span>
-        </p>
+       <div class="col-md-3 d-none d-sm-block">
+        <p class="text-default py-3 mb-0"><img src="img/manage-family.png" alt="family" /> Manage Family</p>
        </div>
+
+       <div class="offset-md-3 col-md-3 col-6">
+        <button type="button" class="btn btn-large btn-default my-2" data-toggle="modal" data-target="#addFamily"><img src="img/add-member.png" /> Add family member</button>
+       </div>
+
+       <div class="col-md-3 col-6">
+        <button class="btn btn-large btn-default my-2" data-toggle="modal" data-target="#addPregnancy"><img src="img/add-pregnanvy.png" /> Add pregnancy</button>
+       </div>
+
       </div>
      </div>
-     <div class="row">
-      <div class="col-md-3">      
-       <div class="m-3 diary-center-border-2">
-        <div class="text-center mb-5">
-         <div class="p-2">
-          <img src="img/add.png" alt="add-member" />
-         </div>
-         <p class="mb-1 font-weight-bold text-center">Jon Bellion</p>
-         <p class="small text-center">bellion@exolve.com</p>
-        </div>
+    </div>
 
-        <!--
+
+    <div class="row">
+
+
+     <div class="col-md-12 px-0 diary-card">
+      <div class="card-head">
+       <div class="row">
+        <div class="col-md-3">
+         <p class="text-default p-3 mb-0"> My Family<br>
+          <span class="small">Family ID : 7552288</span>
+         </p>
+        </div>
+       </div>
+      </div>
+      <div class="row">
+       <div class="col-md-3">      
+        <div class="m-3 diary-center-border-2">
+         <div class="text-center mb-5">
+          <div class="p-2">
+           <img src="img/add.png" alt="add-member" />
+          </div>
+          <p class="mb-1 font-weight-bold text-center">Jon Bellion</p>
+          <p class="small text-center">bellion@exolve.com</p>
+         </div>
+
+         <!--
 <div class="card-bg-footer p-2">
 <p class="text-white mb-0">Creator</p>
 </div>
 -->
 
+        </div>
        </div>
       </div>
      </div>
-    </div>
-
-   </div>
-  </div>
-
-
-
-
-
-  <!--footer starts-->
-  <div class="container-fluid footer mt-5 bg-white p-3">
-   <div class="row justify-content-center">
-    <div class="col-md-4">
-     <img src="img/logo-2.png" alt="baby diary logo" class="float-left mr-2" />
-     <p class="font-12">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation minim veniam, ercitation..</p>
-    </div>
-
-    <div class="col-3 col-md-2 font-12 pl-0 pl-md-5">
-     <h6>About</h6>
-     <ul class="list-unstyled">
-      <li class="py-1"><a class="text-dark" href="">Terms of service</a></li>
-      <li class="py-1"><a class="text-dark" href="">Privacy policy</a></li>
-      <li class="py-1"><a class="text-dark" href="">Copyright</a></li>
-     </ul>
-    </div>
-
-
-
-    <div class="col-3 col-md-2 font-12">
-     <h6>Social</h6>
-     <ul class="list-unstyled">
-      <li class="py-1"><a class="text-dark" href="">Facebook</a></li>
-      <li class="py-1"><a class="text-dark" href="">Youtube</a></li>
-      <li class="py-1"><a class="text-dark" href="">Linkedin</a></li>
-     </ul>
-    </div>
-
-    <div class="col-3 col-md-2">
-     <h6>Downloads</h6>
-     <ul class="list-unstyled">
-      <li class="py-1"><a href="#"><img class="img-fluid" src="img/google-app.png" alt="baby-diary-app-download" /></a></li>
-      <li class="py-1"><a href="#"><img class="img-fluid" src="img/iphone-app.png" alt="baby-diary-app-download" /></a></li>
-     </ul>
 
     </div>
    </div>
 
-   <div class="row justify-content-center">
-    <hr class="hr_colored mb- mt-0 d-inline-block mx-auto" style="width: 100%;">
-    <div class="col-md-7">
-     <p class="text-center">©2018 BabyDiary, All Rights Reserved.</p>
-    </div>
-   </div>
-  </div>
-  <!--footer ends-->
 
-
-  <!--Add member Modal -->
-  <div class="modal fade" id="addFamily" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-   <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-     <div class="modal-header">
-      <h5 class="modal-title" id="exampleModalLongTitle">Add Member</h5>
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-       <span aria-hidden="true">&times;</span>
-      </button>
+   <!--footer starts-->
+   <div class="container-fluid footer mt-5 bg-white p-3">
+    <div class="row justify-content-center">
+     <div class="col-md-4">
+      <img src="img/logo-2.png" alt="baby diary logo" class="float-left mr-2" />
+      <p class="font-12">
+       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation minim veniam, ercitation..</p>
      </div>
-     <div class="modal-body">
-      <form>
-       <div class="form-row">
-        <div class="col">
-         <input type="text" class="form-control" placeholder="First name">
-        </div>
-        <div class="col">
-         <input type="text" class="form-control" placeholder="Last name">
-        </div>
-       </div>
 
-       <div class="form-row mt-3">
+     <div class="col-3 col-md-2 font-12 pl-0 pl-md-5">
+      <h6>About</h6>
+      <ul class="list-unstyled">
+       <li class="py-1"><a class="text-dark" href="">Terms of service</a></li>
+       <li class="py-1"><a class="text-dark" href="">Privacy policy</a></li>
+       <li class="py-1"><a class="text-dark" href="">Copyright</a></li>
+      </ul>
+     </div>
 
-        <div class="col">
-         <label>Gender</label>
-         <div class="row">
-          <div class="col-md-4">
-           <div class="custom-control custom-radio">
-            <input type="radio" id="male" name="gender" class="custom-control-input">
-            <label class="custom-control-label" for="male">Male</label>
-           </div>
-          </div>
 
-          <div class="col-md-6">
-           <div class="custom-control custom-radio">
-            <input type="radio" id="female" name="gender" class="custom-control-input">
-            <label class="custom-control-label" for="female">Female</label>
-           </div>
-          </div>
 
+     <div class="col-3 col-md-2 font-12">
+      <h6>Social</h6>
+      <ul class="list-unstyled">
+       <li class="py-1"><a class="text-dark" href="">Facebook</a></li>
+       <li class="py-1"><a class="text-dark" href="">Youtube</a></li>
+       <li class="py-1"><a class="text-dark" href="">Linkedin</a></li>
+      </ul>
+     </div>
+
+     <div class="col-3 col-md-2">
+      <h6>Downloads</h6>
+      <ul class="list-unstyled">
+       <li class="py-1"><a href="#"><img class="img-fluid" src="img/google-app.png" alt="baby-diary-app-download" /></a></li>
+       <li class="py-1"><a href="#"><img class="img-fluid" src="img/iphone-app.png" alt="baby-diary-app-download" /></a></li>
+      </ul>
+
+     </div>
+    </div>
+
+    <div class="row justify-content-center">
+     <hr class="hr_colored mb- mt-0 d-inline-block mx-auto" style="width: 100%;">
+     <div class="col-md-7">
+      <p class="text-center">©2018 BabyDiary, All Rights Reserved.</p>
+     </div>
+    </div>
+   </div>
+   <!--footer ends-->
+
+
+   <!--Add member Modal -->
+   <div class="modal fade" id="addFamily" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+     <div class="modal-content">
+      <div class="modal-header">
+       <h5 class="modal-title" id="exampleModalLongTitle">Add Member</h5>
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+       </button>
+      </div>
+      <div class="modal-body">
+       <form>
+        <div class="form-row">
+         <div class="col">
+          <input type="text" class="form-control" placeholder="First name">
+         </div>
+         <div class="col">
+          <input type="text" class="form-control" placeholder="Last name">
          </div>
         </div>
 
-        <div class="col">
-         <label>Birthday</label>
-         <input type="date" class="form-control" placeholder="Last name">
-        </div>
-       </div>
-      </form>
-     </div>
-     <div class="modal-footer">
-      <button type="button" class="btn btn-default">Add Family</button>
-     </div>
-    </div>
-   </div>
-  </div>
+        <div class="form-row mt-3">
 
-
-  <!--Add pregnancy Modal -->
-  <div class="modal fade" id="addPregnancy" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-   <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-     <div class="modal-header">
-      <h5 class="modal-title" id="exampleModalLongTitle">Add Pregnancy</h5>
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-       <span aria-hidden="true">&times;</span>
-      </button>
-     </div>
-     <div class="modal-body">
-      <form>
-
-       <div class="form-row mt-3">
-
-        <div class="col">
-
-         <div class="row">
-          <div class="col-md-6">
-           <div class="custom-control custom-radio">
-            <input type="radio" id="Last_cycle" name="delivery" class="custom-control-input">
-            <label class="custom-control-label" for="Last_cycle">Last cycle period</label>
-           </div>
-          </div>
-
-          <div class="col-md-6">
-           <div class="custom-control custom-radio">
-            <input type="radio" id="Expected_date" name="delivery" class="custom-control-input">
-            <label class="custom-control-label" for="Expected_date">Expected date of delivery</label>
-           </div>
-          </div>
-         </div>
-
-         <div class="row">
-          <div class="col-md-12">
-           <div class="input-group my-4">
-
-            <input id="popupDatepicker" type="text" class="form-control docs-date" name="date" placeholder="Pick a date" style="height: 3rem">
-            <div class="input-group-append">
-             <button type="button" class="btn btn-outline-secondary docs-datepicker-trigger" disabled>
-              <i class="far fa-calendar-alt" aria-hidden="true"></i>
-             </button>
+         <div class="col">
+          <label>Gender</label>
+          <div class="row">
+           <div class="col-md-4">
+            <div class="custom-control custom-radio">
+             <input type="radio" id="male" name="gender" class="custom-control-input">
+             <label class="custom-control-label" for="male">Male</label>
             </div>
-
            </div>
+
+           <div class="col-md-6">
+            <div class="custom-control custom-radio">
+             <input type="radio" id="female" name="gender" class="custom-control-input">
+             <label class="custom-control-label" for="female">Female</label>
+            </div>
+           </div>
+
           </div>
          </div>
 
+         <div class="col">
+          <label>Birthday</label>
+          <input type="date" class="form-control" placeholder="Last name">
+         </div>
         </div>
-
-       </div>
-      </form>
-     </div>
-     <div class="modal-footer">
-      <button type="button" class="btn btn-default">Save pregnancy</button>
+       </form>
+      </div>
+      <div class="modal-footer">
+       <button type="button" class="btn btn-default">Add Family</button>
+      </div>
      </div>
     </div>
    </div>
+
+
+   <!--Add pregnancy Modal -->
+   <div class="modal fade" id="addPregnancy" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+     <div class="modal-content">
+      <div class="modal-header">
+       <h5 class="modal-title" id="exampleModalLongTitle">Add Pregnancy</h5>
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+       </button>
+      </div>
+      <div class="modal-body">
+       <form>
+
+        <div class="form-row mt-3">
+
+         <div class="col">
+
+          <div class="row">
+           <div class="col-md-6">
+            <div class="custom-control custom-radio">
+             <input type="radio" id="Last_cycle" name="delivery" class="custom-control-input">
+             <label class="custom-control-label" for="Last_cycle">Last cycle period</label>
+            </div>
+           </div>
+
+           <div class="col-md-6">
+            <div class="custom-control custom-radio">
+             <input type="radio" id="Expected_date" name="delivery" class="custom-control-input">
+             <label class="custom-control-label" for="Expected_date">Expected date of delivery</label>
+            </div>
+           </div>
+          </div>
+
+          <div class="row">
+           <div class="col-md-12">
+            <div class="input-group my-4">
+
+             <input id="popupDatepicker" type="text" class="form-control docs-date" name="date" placeholder="Pick a date" style="height: 3rem">
+             <div class="input-group-append">
+              <button type="button" class="btn btn-outline-secondary docs-datepicker-trigger" disabled>
+               <i class="far fa-calendar-alt" aria-hidden="true"></i>
+              </button>
+             </div>
+
+            </div>
+           </div>
+          </div>
+
+         </div>
+
+        </div>
+       </form>
+      </div>
+      <div class="modal-footer">
+       <button type="button" class="btn btn-default">Save pregnancy</button>
+      </div>
+     </div>
+    </div>
+   </div>
+
+  </div>
+
+  <div off-canvas="main-menu left overlay">
+   <img id="logo-menu" class="p-3" src="img/Baby's%20Dairy%20logo%20white.png" alt="Babydiary">
+
+   <p class="px-3">My family</p>
+   <ul class="menu small">
+    <li><a class="dropdown-side-2" href="feed.html" data-toggle="collapse" data-target="#family-side" aria-controls="family" aria-expanded="false" aria-label="Toggle navigation"> Tunde</a>
+
+
+     <ul class="list-unstyled collapse side" id="family-side" style="" aria-labelledby="family">
+      <li class="">
+       <a class="text-white" href="feed.html"><span><img src="img/dashboard-white.png" class="mb-1 mr-2" /></span>  Dashboard</a>
+      </li>
+
+      <li class="">
+       <a class="text-white" href="immunization.html"><span><img src="img/syringe-white.png" class="mb-1 mr-2" /></span>  Immunization</a>
+      </li>
+
+      <li class="">
+       <a class="text-white" href="moment.html"><span><img src="img/moment%20icon-white.png" class="mb-1 mr-2" /></span>  Moments</a>
+      </li>
+
+      <li class="">
+       <a class="text-white" href="calender.html"><span><img src="img/Calendar%20icon-white.png" class="mb-1 mr-2" /></span>  Calendar</a>
+      </li>
+
+      <li class="">
+       <a class="text-white" href="#"><span><img src="img/nutrition-white.png" class="mb-1 mr-2" /></span>  Nutrition</a>
+      </li>
+
+      <li class="">
+       <a class="text-white" href="measurement.html"><span><img src="img/rule-white.png" class="mb-1 mr-2" /></span>  Measurement</a>
+      </li>
+
+      <li class="">
+       <a class="text-white" href="#"><span><img src="img/statistics-white.png" class="mb-1 mr-2" /></span>  Growth Chart</a>
+      </li>
+
+      <li class="">
+       <a class="text-white" href="document.html"><span><img src="img/doc-white.png" class="mb-1 mr-2" /></span>  Documents</a>
+      </li>
+     </ul>
+
+
+    </li>
+    <li><a href="#" class="js-close-any"> Close</a></li>
+   </ul>
   </div>
 
 
@@ -318,6 +352,8 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
   <script src="js/jquery.plugin.js"></script>
   <script src="js/jquery.datepick.js"></script>
+  <script src="js/slidebars.min.js"></script>
+  <script src="js/slidecontrol.js"></script>
 
   <script>
 
